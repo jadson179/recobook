@@ -1,6 +1,8 @@
 
 ![](https://img.shields.io/badge/Status-InDevelopment-gree)
-# Recobook
+
+
+![](images/Banner1512x720.svg)
 
 Sistema universal de recomendação de Locais 
 
