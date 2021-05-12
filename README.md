@@ -48,7 +48,7 @@ Os `usuários` serão as fontes responsáveis por popular a aplicação com os e
 ---
 ### Caso de Uso
 
-![](images/usecases.svg)
+[![](images/usecases.svg)](https://raw.githubusercontent.com/jadson179/recobook/main/images/usecases.svg)
 
 ## Autor
 
