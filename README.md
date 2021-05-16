@@ -58,7 +58,7 @@ Os `usuários` serão as fontes responsáveis por popular a aplicação com os e
 
 ### Wireframes
 
-[![](images/Login.svg)](https://www.figma.com/file/I9X2Xs0EJeO7Zp2ejWcGFr/Untitled?node-id=15%3A32)
+[![](images/PaginaPrincipal.svg)](https://www.figma.com/file/I9X2Xs0EJeO7Zp2ejWcGFr/Untitled?node-id=15%3A32)
 
 [Vá para o figma :)](https://www.figma.com/file/I9X2Xs0EJeO7Zp2ejWcGFr/Untitled?node-id=15%3A32)
 
