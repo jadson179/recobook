@@ -75,7 +75,7 @@ Considerando esta demanda específica universal de centralizar as experiências 
 [Vá para o figma :)](https://www.figma.com/file/I9X2Xs0EJeO7Zp2ejWcGFr/Untitled?node-id=15%3A32)
 
 
-## Road Map 
+## Road Map 🤑
 
 - Divulgação de anuncios dos parceiros da plataforma.
 
