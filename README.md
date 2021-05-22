@@ -14,7 +14,7 @@ Um website gratuito para os usuários compartilharem a sua experiência com dete
 
 ## Problema 🤦
 
-As informações sobre os locais pelo mundo, estão decentralizadas.
+As informações sobre os locais pelo mundo, estão descentralizadas.
 
 
 ## Solução 💡
