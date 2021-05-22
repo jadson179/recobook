@@ -55,6 +55,7 @@ Considerando esta demanda específica universal de centralizar as experiências 
 - `RNF-2`: O sistema deve ter seu backend construído em java
 - `RNF-3`: O sistema deve ter seu frontend construído em nextjs
 - `RNF-3`: O sistema deve ser construido para rodar em docker
+- `RNF-4`: O sistema deve ser compativel com mysql
 
 
 ### Regras de negócio ❗️
@@ -66,14 +67,16 @@ Considerando esta demanda específica universal de centralizar as experiências 
 
 [![](images/usecases.svg)](https://raw.githubusercontent.com/jadson179/recobook/main/images/usecases.svg)
 
-
-
 ### Wireframes 🖼
 
 [![](images/PaginaPrincipal.svg)](https://www.figma.com/file/I9X2Xs0EJeO7Zp2ejWcGFr/Untitled?node-id=15%3A32)
 
 [Vá para o figma :)](https://www.figma.com/file/I9X2Xs0EJeO7Zp2ejWcGFr/Untitled?node-id=15%3A32)
 
+
+### Diagramas 📈
+
+- [Diagrama Entidade Relacionamento](https://raw.githubusercontent.com/recobook/recobook/main/images/database_recobook.svg)
 
 ## Road Map 🤑
 
