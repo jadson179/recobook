@@ -23,7 +23,7 @@ Ajudar a centralizar a informação sobre os locais pelo mundo.
 
 ## Público alvo 🎯
 
-Pessoas que estão querendo conhecer os novos locais. 
+Pessoas que estão querendo conhecer novos locais. 
 
 
 ## Contextualização 🗣
