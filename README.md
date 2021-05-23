@@ -45,10 +45,8 @@ Considerando esta demanda específica universal de centralizar as experiências 
 
 - `RF-1:` Manter elos - CRUD
 - `RF-2:` Manter usuarios - CRUD
-- `RF-3:` Manter paises - CRUD
-- `RF-4:` Manter estados - CRUD
-- `RF-5:` Manter comentários - CRUD
-- `RF-6:` Interface de compartilhamentos
+- `RF-3:` Manter comentários - CRUD
+- `RF-4:` Interface de compartilhamentos
 ### Não funcionais ♻️
 
 - `RNF-1`: O sistema deve ter uma versão para uso em navegador / web browser
