@@ -43,9 +43,9 @@ Considerando esta demanda específica universal de centralizar as experiências 
 
 ### Funcionais ⚙️
 
-`RF-01:` Manter elos - CRUD
-`RF-02:` Manter usuarios - CRUD
-`RF-03:` Manter comentários - CRUD
+- `RF-01:` Manter elos - CRUD
+- `RF-02:` Manter usuarios - CRUD
+- `RF-03:` Manter comentários - CRUD
  
 ### Não funcionais ♻️
 
