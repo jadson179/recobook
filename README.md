@@ -43,17 +43,17 @@ Considerando esta demanda específica universal de centralizar as experiências 
 
 ### Funcionais ⚙️
 
-- `RF-1:` Manter elos - CRUD
-- `RF-2:` Manter usuarios - CRUD
-- `RF-3:` Manter comentários - CRUD
-- `RF-4:` Interface de compartilhamentos
+`RF-01:` Manter elos - CRUD
+`RF-02:` Manter usuarios - CRUD
+`RF-03:` Manter comentários - CRUD
+ 
 ### Não funcionais ♻️
 
-- `RNF-1`: O sistema deve ter uma versão para uso em navegador / web browser
-- `RNF-2`: O sistema deve ter seu backend construído em java
-- `RNF-3`: O sistema deve ter seu frontend construído em nextjs
-- `RNF-3`: O sistema deve ser construido para rodar em docker
-- `RNF-4`: O sistema deve ser compativel com mysql
+- `RNF-01`: O sistema deve ter uma versão para uso em navegador / web browser ([brave >= 1.24.85](https://brave.com/pt/),[google chrome >= 90.0.4430.212](https://www.google.com/intl/pt-BR/chrome/),[firefox >= 88.0.1](https://www.mozilla.org/pt-BR/firefox/new/))
+- `RNF-02`: O sistema deve ter seu backend construído em java
+- `RNF-03`: O sistema deve ter seu frontend construído em nextjs
+- `RNF-03`: O sistema deve ser construido para rodar em docker
+- `RNF-04`: O sistema deve ser compativel com mysql==8.0.23
 
 
 ### Regras de negócio ❗️
