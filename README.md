@@ -75,6 +75,7 @@ Considerando esta demanda específica universal de centralizar as experiências 
 ### Diagramas 📈
 
 - [Diagrama Entidade Relacionamento](https://raw.githubusercontent.com/recobook/recobook/main/images/database_recobook.svg)
+- [Diagrama de Classe](https://raw.githubusercontent.com/recobook/recobook/main/images/diagrama-classe.png)
 
 
 ### Google Trends 📊
