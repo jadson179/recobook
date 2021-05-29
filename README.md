@@ -90,7 +90,7 @@ Considerando esta demanda específica universal de centralizar as experiências 
 - [Como pesquisar locais](https://trends.google.com.br/trends/explore?geo=BR&q=Como%20pesquisar%20locais)
 - [Florianópolis locais](https://trends.google.com.br/trends/explore?geo=BR&q=Florian%C3%B3polis%20locais)
 
-#### Google Forms:
+#### Google Forms
 
 - [Recobook Pergunta](https://forms.gle/SHFm5WdXsYLddQq66)
 
