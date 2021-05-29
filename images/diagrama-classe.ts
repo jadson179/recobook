@@ -3,6 +3,7 @@ export class Elo {
     private description: string 
     private qtd_likes: number
     private qtd_comments: number
+    private category: string
     private address: string
     private user: User
 }
