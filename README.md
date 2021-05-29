@@ -78,7 +78,10 @@ Considerando esta demanda específica universal de centralizar as experiências 
 - [Diagrama de Classe](https://raw.githubusercontent.com/recobook/recobook/main/images/diagrama-classe.png)
 
 
-### Google Trends 📊
+### Captação de leads 📊
+
+
+#### Google Trends
 
 - [Viagens](https://trends.google.com.br/trends/explore?q=Viagens&geo=BR)
 - [Melhores locais brasil](https://trends.google.com.br/trends/explore?geo=BR&q=Melhores%20locais%20brasil)
@@ -86,6 +89,11 @@ Considerando esta demanda específica universal de centralizar as experiências 
 - [Locais brasil](https://trends.google.com.br/trends/explore?geo=BR&q=locais%20brasil)
 - [Como pesquisar locais](https://trends.google.com.br/trends/explore?geo=BR&q=Como%20pesquisar%20locais)
 - [Florianópolis locais](https://trends.google.com.br/trends/explore?geo=BR&q=Florian%C3%B3polis%20locais)
+
+#### Google Forms:
+
+- [Recobook Pergunta](https://forms.gle/SHFm5WdXsYLddQq66)
+
 ## Road Map 🤑
 
 - Divulgação de anuncios dos parceiros da plataforma.
