@@ -14,11 +14,11 @@ Um website gratuito para os usuários compartilharem a sua experiência com dete
 
 ## Problema 🤦
 
-As informações sobre os locais pelo mundo, estão descentralizadas, tornando demorado e ofuscado o processo que as pessoas tem de encontrar o local desejado para conhecer ou viajar para aquele local. Há uma grande perda tempo nesse processo 🐌.
+As pessoas perdem muito do seu tempo pesquisando informações sobre os locais que desejam conhecer e acabam batendo cabeça até achar o local que queira conhecer ou viajar para aquele local, há uma grande perda tempo nesse processo 🐌.
 
 ## Solução 💡
 
-O motivo do desenvolvimento dessa solução vem da necessidade das pessoas terem a facilidade em encontrar mais informações sobres os locais que querem conhecer, de uma forma centralizada, tornando ágil esse processo, e não apenas conhecer, mas aproveitar de uma rede de compartilhamento entre as pessoas. Para alcançar esse objetivo inicial, o sistema iniciará na web por conta da flexibilidade em alcançar  muitos públicos, pois a maioria dos sistemas operacionais linux, mac, windows, android e ios  dispõem de navegadores para acesso à plataforma recobook. 
+O sistema vai trazer facilidade em encontrar mais informações sobres os locais que querem conhecer, de uma forma centralizada, tornando ágil esse processo, e não apenas conhecer, mas aproveitar de uma rede de compartilhamento entre as pessoas. Para alcançar esse objetivo inicial, o sistema iniciará na web por conta da flexibilidade em alcançar  muitos públicos, pois a maioria dos sistemas operacionais linux, mac, windows, android e ios  dispõem de navegadores para acesso à plataforma recobook. 
 
 
 ## Público alvo 🎯
