@@ -103,7 +103,7 @@ Considerando esta demanda específica universal de centralizar as experiências 
 ## Documentos 
 
 - [TCC](https://docs.google.com/document/d/166EtTHYkeVfU6L0Agrr7-cebdI2YYe8iCPV3qY_vwV4/edit?usp=sharing) 
-- [Apresentação] (https://docs.google.com/presentation/d/15w9DELX1OTOT2ldyaGt0KcycmSaDiDuIjB8BsrtXqaY/edit?usp=sharing)
+- [Apresentação](https://docs.google.com/presentation/d/15w9DELX1OTOT2ldyaGt0KcycmSaDiDuIjB8BsrtXqaY/edit?usp=sharing)
 
 ## Autor
 
