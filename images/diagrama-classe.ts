@@ -15,6 +15,7 @@ export class User {
     private username:string
     private password:string
     private photo:string
+    private bio: string
 }
 
 export class Images {
@@ -32,11 +33,13 @@ export class Videos {
 export class Likes {
     private id: number
     private elo: Elo
+    private user:User
 }
 
 export class Comments {
     private id: number
     private content:string
     private elo: Elo
+    private user:User
     
 }
