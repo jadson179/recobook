@@ -9,7 +9,7 @@ Sistema universal de recomendação de Locais
 
 Um website gratuito para os usuários compartilharem a sua experiência com determinado local do mundo, de forma que outras pessoas consigam saber que você viveu essa experência e quer que outras pessoas tenha essa mesma sensação em suas vidas 🥰. O nosso objetivo é simples, em defender que bons momentos devem ser compartilhados de uma forma simples.
 
-[acesse aqui](https://recobook.com.br)
+[acesse aqui](https://recobook.com.br) 
 
 
 ## Problema 🤦
@@ -46,7 +46,9 @@ Considerando esta demanda específica universal de centralizar as experiências 
 - `RF-01:` Manter elos - CRUD
 - `RF-02:` Manter usuarios - CRUD
 - `RF-03:` Manter comentários - CRUD
+- `RF-04:` Manter curtidas - CRUD
  
+
 ### Não funcionais ♻️
 
 - `RNF-01`: O sistema deve ter uma versão para uso em navegador / web browser ([brave >= 1.24.85](https://brave.com/pt/),[google chrome >= 90.0.4430.212](https://www.google.com/intl/pt-BR/chrome/),[firefox >= 88.0.1](https://www.mozilla.org/pt-BR/firefox/new/))
@@ -97,6 +99,11 @@ Considerando esta demanda específica universal de centralizar as experiências 
 ## Road Map 🤑
 
 - Divulgação de anuncios dos parceiros da plataforma.
+
+## Documentos 
+
+- [TCC](https://docs.google.com/document/d/166EtTHYkeVfU6L0Agrr7-cebdI2YYe8iCPV3qY_vwV4/edit?usp=sharing) 
+- [Apresentação](https://docs.google.com/presentation/d/15w9DELX1OTOT2ldyaGt0KcycmSaDiDuIjB8BsrtXqaY/edit?usp=sharing)
 
 ## Autor
 
