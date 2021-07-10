@@ -1,5 +1,5 @@
 build:
-	JAVA_HOME=/home/jadson/Downloads/jdk-11.0.8+10 mvn package
+	JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 mvn package
 	docker build -t core:latest .
 	docker tag core:latest recobook/core:latest
 
