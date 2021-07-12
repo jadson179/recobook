@@ -37,13 +37,11 @@ public class User {
     @Column(nullable = false, length = 255)
     private String bio;
 
-    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Elo> elos;
 
-
-
-    public User(){}
-    
+    public User() {
+    }
 
     public User(Long id, String name, String email, String username, String password, String photo, String bio) {
         this.id = id;

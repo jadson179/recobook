@@ -12,23 +12,22 @@ import org.springframework.web.bind.annotation.RestController;
 import core.model.User;
 import core.repositorie.UserRepository;
 
+
 @RestController
 public class UserController {
     @Autowired
     private UserRepository repo;
 
     @Autowired
-    private JdbcTemplate database;
+    private JdbcTemplate jdbcTemplate;
      
     @GetMapping("/users")
     public List<User> listAll(Model model) {
-        
 
-        List<User> users = database.query("SELECT * FROM users;",new BeanPropertyRowMapper<User>(User.class));
-        
+        List<User> users = jdbcTemplate.query("SELECT * FROM users;",new BeanPropertyRowMapper<User>(User.class));
+
         
         return users;
     }
-
      
 }
