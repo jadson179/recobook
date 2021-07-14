@@ -9,7 +9,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import core.model.Elo;
 
 @Entity
 @Table(name = "Comments")
@@ -29,8 +28,7 @@ public class Comment {
     @JoinColumn(name = "id_user", nullable = false)
     private User user;
 
-    public Comment() {
-    }
+    public Comment() {}
 
     public Comment(Long id, Elo elo, User user, String content) {
         this.id = id;
