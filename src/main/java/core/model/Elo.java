@@ -2,6 +2,7 @@ package core.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -24,12 +25,6 @@ public class Elo {
     @Column(nullable = false, length = 255)
     private String description;
 
-    @Column(nullable = false)
-    private int qtd_likes;
-
-    @Column(nullable = false)
-    private int qtd_comments;
-
     @Column(nullable = false, length = 255)
     private String category;
 
@@ -40,20 +35,18 @@ public class Elo {
     @JoinColumn(name = "id_user")
     private User user;
 
-    @OneToMany(mappedBy = "elo", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "elo", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private List<Image> image;
 
-    @OneToMany(mappedBy = "elo", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "elo", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private List<Video> Video;
 
     public Elo() {
     }
 
-    public Elo(Long id, String description, int qtd_likes, int qtd_comments, String category, String address) {
+    public Elo(Long id, String description, String category, String address) {
         this.id = id;
         this.description = description;
-        this.qtd_likes = qtd_likes;
-        this.qtd_comments = qtd_comments;
         this.category = category;
         this.address = address;
     }
@@ -72,22 +65,6 @@ public class Elo {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getQtd_likes() {
-        return qtd_likes;
-    }
-
-    public void setQtd_likes(int qtd_likes) {
-        this.qtd_likes = qtd_likes;
-    }
-
-    public int getQtd_comments() {
-        return qtd_comments;
-    }
-
-    public void setQtd_comments(int qtd_comments) {
-        this.qtd_comments = qtd_comments;
     }
 
     public String getCategory() {
@@ -109,8 +86,8 @@ public class Elo {
     public User getUser() {
         return user;
     }
-
     public void setUser(User user) {
         this.user = user;
     }
 }
+
