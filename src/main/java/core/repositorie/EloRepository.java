@@ -4,4 +4,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import core.model.Elo;
  
-public interface EloRepository extends JpaRepository<Elo, Integer> { }
+public interface EloRepository extends JpaRepository<Elo, Long> { }

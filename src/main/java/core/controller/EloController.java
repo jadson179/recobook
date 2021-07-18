@@ -60,7 +60,7 @@ public class EloController {
 
     @DeleteMapping("/elo")
     public ResponseEntity<Boolean>  delete (@RequestBody Elo elo,@RequestHeader Map<String,String> headers) {
-
+        
         eloService = new EloService();
         
         if(eloService.delete(elo,jdbcTemplate,headers)){
