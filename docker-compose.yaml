@@ -7,6 +7,15 @@ services:
       - 8080:8080
     depends_on: 
       - db
+      - dobby
+    environment: 
+      SERVICE_AUTH_KEY: "teste"
+
+  dobby: 
+    container_name: dobby
+    image: recobook/dobby:latest
+    ports: 
+      - 1993:1993    
     environment: 
       SERVICE_AUTH_KEY: "teste"
 

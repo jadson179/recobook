@@ -2,6 +2,7 @@ build:
 	JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 mvn package
 
 dev:
+	docker-compose up db dobby
 	nodemon -e java -w src -x 'JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 mvn package && SERVICE_AUTH_KEY=teste java -jar ./target/recobook-0.0.1-SNAPSHOT.jar'
 
 start:
