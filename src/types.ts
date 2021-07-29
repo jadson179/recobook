@@ -1,4 +1,5 @@
-export interface User {
+// deno-lint-ignore-file
+export interface IUser {
     id: number;
     name: string
     email: string
@@ -8,7 +9,7 @@ export interface User {
     bio: string
 }
 
-export interface Elo {
+export interface IElo {
     id: number;
     description: string;
     category: string;
@@ -18,21 +19,21 @@ export interface Elo {
     id_user: number;
 }
 
-export interface Comment {
+export interface IComment {
     id: number;
     content: string;
     id_elo: number;
     id_user: number;
 }
 
-export interface Like {
+export interface ILike {
     id: number;
     content: string;
     id_elo: number;
     id_user: number;
 } 
 
-export interface Video {
+export interface IVideo {
     id: number;
     url: string;
     id_elo: number;
