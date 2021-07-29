@@ -20,6 +20,7 @@ services:
       SERVICE_AUTH_KEY: "teste"
 
   db:
+    container_name: database
     image: mysql:5.7
     hostname: db
     restart: always
