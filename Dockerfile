@@ -1,10 +1,18 @@
-FROM openjdk:8-jdk-alpine
+FROM denoland/deno:1.11.2
 
-EXPOSE 8080
+
+EXPOSE 1993
 
 WORKDIR /app
 
-COPY target/recobook-0.0.1-SNAPSHOT.jar /app/core.jar
+VOLUME [ "/app" ]
+#USER deno
 
-ENTRYPOINT [ "java", "-jar", "core.jar" ]
+COPY src .
 
+
+ADD . .
+
+RUN deno cache main.ts
+
+CMD ["run", "--allow-net", "--allow-read", "--allow-write", "--allow-env", "main.ts"]
