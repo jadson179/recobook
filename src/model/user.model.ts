@@ -1,7 +1,7 @@
 import { IUser } from "../types.ts";
 
 export default class User implements IUser {
-    id!: number;
+    id?: number;
     name!: string;
     email!: string;
     username!: string;

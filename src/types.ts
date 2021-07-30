@@ -1,6 +1,6 @@
 // deno-lint-ignore-file
 export interface IUser {
-    id: number;
+    id?: number;
     name: string
     email: string
     username: string
