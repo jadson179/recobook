@@ -7,7 +7,7 @@ export const connection = await new Client().connect({
   username: DATABASE_USERNAME,
   password: DATABASE_PASSWORD,
   db: DATABASE_NAME,
-  port: DATABASE_PORT,
+  port: DATABASE_PORT
 });
 
 export default connection

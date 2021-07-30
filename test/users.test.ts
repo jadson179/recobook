@@ -1,6 +1,6 @@
 import { assertEquals } from "https://deno.land/std@0.103.0/testing/asserts.ts";
 
-import { create_user } from '../src/service/user.service.ts'
+import { create_user, update_user } from '../src/service/user.service.ts'
 
 import {
     MESSAGE_SUCESS_CREATE_USER,
@@ -30,7 +30,7 @@ Deno.test("[service] Deveria criar um usuario", async () => {
 
 Deno.test("[service] Deveria atualizar um usuario", async () => {
     
-    const {error } = await create_user({
+    const { error } = await update_user({
         name: "Jadson dos Santos Silva",
         email: "jadson444.santos@gmail.com",
         username: "15859eb4-f0bb-11eb-aef4-9b77f48ed9b1",
@@ -39,6 +39,7 @@ Deno.test("[service] Deveria atualizar um usuario", async () => {
         bio: "",
         id: 1
     })
+
 
     if (error) { 
         assertEquals<boolean>(error,true)
