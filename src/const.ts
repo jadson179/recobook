@@ -19,6 +19,8 @@ export const MESSAGE_USER_ALREADY_EXISTS_USERNAME = "Já existe um usuário com 
 
 export const MESSAGE_SUCCESS_UPDATE_USER = "Usuário atualizado com sucesso"
 
+export const MESSAGE_SUCCESS_DELETE_USER = "Usuário deletado com sucesso"
+
 
 export const SCHEMEA_CREATE_USER = new Schema({
   id: {type:Number,required: false,message: "id é obrigatório"},
@@ -38,6 +40,37 @@ export const SCHEMEA_UPDATE_USER = new Schema({
   username: {type:String,required: true,message: "nome de usuário é obrigatório"},
   password: {type:String,required: true,message: "senha é obrigatório"},
   photo: {type:String,required: true,message: "foto é obrigatório"},
+  bio: {type:String,required: false}
+}) 
+
+
+export const SCHEMA_DELETE_USER_BY_ID = new Schema({
+  id: {type:Number,required: true,message: "id é obrigatório"},
+  name: {type:String,required: false,message: "nome é obrigatório"},
+  email: {type:String,required: false,message: "email é obrigatório"},
+  username: {type:String,required: false,message: "nome de usuário é obrigatório"},
+  password: {type:String,required: false,message: "senha é obrigatório"},
+  photo: {type:String,required: false,message: "foto é obrigatório"},
+  bio: {type:String,required: false}
+}) 
+
+export const SCHEMEA_DELETE_USER_BY_EMAIL = new Schema({
+  id: {type:Number,required: false,message: "id é obrigatório"},
+  name: {type:String,required: false,message: "nome é obrigatório"},
+  email: {type:String,required: true,message: "email é obrigatório"},
+  username: {type:String,required: false,message: "nome de usuário é obrigatório"},
+  password: {type:String,required: false,message: "senha é obrigatório"},
+  photo: {type:String,required: false,message: "foto é obrigatório"},
+  bio: {type:String,required: false}
+}) 
+
+export const SCHEMEA_DELETE_USER_BY_USERNAME = new Schema({
+  id: {type:Number,required: false,message: "id é obrigatório"},
+  name: {type:String,required: false,message: "nome é obrigatório"},
+  email: {type:String,required: true,message: "email é obrigatório"},
+  username: {type:String,required: false,message: "nome de usuário é obrigatório"},
+  password: {type:String,required: false,message: "senha é obrigatório"},
+  photo: {type:String,required: false,message: "foto é obrigatório"},
   bio: {type:String,required: false}
 }) 
 

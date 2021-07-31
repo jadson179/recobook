@@ -1,12 +1,12 @@
 // deno-lint-ignore-file
 export interface IUser {
     id?: number;
-    name: string
-    email: string
-    username: string
-    password: string
-    photo: string
-    bio: string
+    name?: string
+    email?: string
+    username?: string
+    password?: string
+    photo?: string
+    bio?: string
 }
 
 export interface IElo {

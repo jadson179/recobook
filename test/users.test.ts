@@ -1,7 +1,7 @@
 // deno-lint-ignore-file
 import { assertEquals,assertStrictEquals} from "https://deno.land/std@0.103.0/testing/asserts.ts";
 
-import { create_user, update_user } from '../src/service/user.service.ts'
+import { create_user, delete_user_by_id, update_user } from '../src/service/user.service.ts'
 
 
 
@@ -36,7 +36,6 @@ Deno.test("Deveria atualizar um usuario", async () => {
         id: 1
     })
 
-
     if (error) { 
         assertEquals<boolean>(error,true)
     }else {
@@ -59,5 +58,14 @@ Deno.test("Deveria solicitar o id quando atualizar o usuário", async () => {
 
     assertStrictEquals(message,"id é obrigatório")
     assertEquals<boolean>(error,true)
+});
+
+
+Deno.test("Deveria excluir o usuário pelo id", async () => {
+    
+    const { error } = await delete_user_by_id({
+        id: 1
+    })
+    assertEquals<boolean>(error,false)
 });
 
