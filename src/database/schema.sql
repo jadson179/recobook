@@ -20,7 +20,9 @@ CREATE TABLE IF NOT EXISTS `elos` (
   `category` VARCHAR(255) NULL,
   `address` VARCHAR(255) NULL,
   `id_user` INT NOT NULL,
-   FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
+  FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) 
+  ON DELETE CASCADE 
+  ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS `comments` (
@@ -28,16 +30,26 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `content` TEXT NULL,
   `id_elo` INT NOT NULL,
   `id_user` INT NOT NULL,
-  FOREIGN KEY (`id_elo`) REFERENCES `elos` (`id`),
+  FOREIGN KEY (`id_elo`) REFERENCES `elos` (`id`)
+  ON DELETE CASCADE 
+  ON UPDATE CASCADE
+  ,
   FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
+  ON DELETE CASCADE 
+  ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS `likes` (
   `id` INT NOT NULL AUTO_INCREMENT  PRIMARY KEY,
   `id_elo` INT NOT NULL,
   `id_user` INT NOT NULL,
-   FOREIGN KEY (`id_elo`) REFERENCES `elos` (`id`),
+   FOREIGN KEY (`id_elo`) REFERENCES `elos` (`id`)
+   ON DELETE CASCADE 
+   ON UPDATE CASCADE
+   ,
    FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
+   ON DELETE CASCADE 
+   ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS `images` (
@@ -45,6 +57,8 @@ CREATE TABLE IF NOT EXISTS `images` (
   `url` VARCHAR(255) NULL,
   `id_elo` INT NOT NULL,
    FOREIGN KEY (`id_elo`) REFERENCES `elos` (`id`)
+   ON DELETE CASCADE 
+   ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS `videos` (
@@ -52,4 +66,6 @@ CREATE TABLE IF NOT EXISTS `videos` (
   `url` VARCHAR(255) NULL,
   `id_elo` INT NOT NULL,
    FOREIGN KEY (`id_elo`) REFERENCES `elos` (`id`)
+   ON DELETE CASCADE 
+   ON UPDATE CASCADE
 );
