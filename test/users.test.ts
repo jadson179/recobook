@@ -26,21 +26,16 @@ Deno.test("Deveria criar um usuario", async () => {
 
 Deno.test("Deveria atualizar um usuario", async () => {
     
-    const { error } = await update_user({
+    const { error,message } = await update_user({
         name: "Jadson dos Santos Silva",
-        email: "jadson444.santos@gmail.com",
+        email: "jadson444.stos@gmail.com",
         username: "15859eb4-f0bb-11eb-aef4-9b77f48ed9b1",
         password: "15859eb4-f0bb-11eb-aef4-9b77f48ed9b1",
         photo: "http://0.0.0.0:1993/user/0000000001.png",
         bio: "",
         id: 1
     })
-
-    if (error) { 
-        assertEquals<boolean>(error,true)
-    }else {
-        assertEquals<boolean>(error,false)
-    }
+    assertEquals<boolean>(error,false)
 
 });
 

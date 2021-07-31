@@ -1,15 +1,26 @@
+import { ClientConfig } from "https://deno.land/x/mysql@v2.9.0/mod.ts";
 import { Schema } from "https://deno.land/x/valivar@v6.2.11/mod.ts"
 
 
 
-
 export const SERVER_PORT = 8000;
-
 export const DATABASE_HOST = "0.0.0.0";
 export const DATABASE_USERNAME = "root";
 export const DATABASE_PASSWORD = "root";
 export const DATABASE_NAME = "core";
 export const DATABASE_PORT = 3306;
+
+export const CLIENT_DATABASE_CONFIG:ClientConfig = {
+  hostname: DATABASE_HOST,
+  username: DATABASE_USERNAME,
+  password: DATABASE_PASSWORD,
+  db: DATABASE_NAME,
+  port: DATABASE_PORT,
+  charset: "utf8"
+}
+
+
+
 
 export const MESSAGE_INTERNAL_SERVER_ERROR = "O servidor encontrou uma situação com a qual não sabe lidar"
 

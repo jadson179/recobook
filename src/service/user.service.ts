@@ -13,6 +13,7 @@ import {
     SCHEMEA_UPDATE_USER,
     SCHEMEA_CREATE_USER,
     SCHEMA_DELETE_USER_BY_ID,
+    CLIENT_DATABASE_CONFIG
 } from "../const.ts";
 
 export async function create_user(user:User) {
@@ -23,7 +24,7 @@ export async function create_user(user:User) {
     if (errors.length > 0) {
         return { error: true, message: errors[0].message, status: 400  }
     }
-
+    await connection.connect(CLIENT_DATABASE_CONFIG)
     await connection.execute(`INSERT INTO users VALUES (NULL,?,?,?,?,?,?);`,[
         user.name,
         user.email,
@@ -32,7 +33,7 @@ export async function create_user(user:User) {
         user.photo,
         user.bio
     ])
-
+    await connection.close()
 
     return { error: false, message: MESSAGE_SUCESS_CREATE_USER, status: 201  }
    
@@ -62,8 +63,9 @@ export async function update_user(user:User) {
     if (errors.length > 0) {
         return { error: true, message: errors[0].message, status: 400  }
     }
-    
-   const {lastInsertId} = await connection.execute(`UPDATE users SET name = ?, email = ?, username = ?, password = ?, photo = ?, bio = ? WHERE id = ?;`,[
+
+   await connection.connect(CLIENT_DATABASE_CONFIG)
+   await connection.execute(`UPDATE users SET name = ?, email = ?, username = ?, password = ?, photo = ?, bio = ? WHERE id = ?;`,[
          user.name,
          user.email,
          user.username,
@@ -72,6 +74,7 @@ export async function update_user(user:User) {
          user.bio,
          user.id
     ])
+    await connection.close()
      
     return { error: false, message: MESSAGE_SUCCESS_UPDATE_USER, status: 200  }
      
@@ -102,10 +105,11 @@ export async function delete_user_by_id(user:User){
         if (errors.length > 0) {
             return { error: true, message: errors[0].message, status: 400  }
         }
+        await connection.connect(CLIENT_DATABASE_CONFIG)
         await connection.execute(`DELETE FROM users WHERE id = ?;`,[
             user.id
         ])
-    
+        await connection.close()
         return { error: false, message: MESSAGE_SUCCESS_DELETE_USER, status: 200  }
        
     } catch (error) {
