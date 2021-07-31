@@ -78,8 +78,8 @@ export const SCHEMA_DELETE_USER_BY_EMAIL = new Schema({
 export const SCHEMA_DELETE_USER_BY_USERNAME = new Schema({
   id: {type:Number,required: false,message: "id é obrigatório"},
   name: {type:String,required: false,message: "nome é obrigatório"},
-  email: {type:String,required: true,message: "email é obrigatório"},
-  username: {type:String,required: false,message: "nome de usuário é obrigatório"},
+  email: {type:String,required: false,message: "email é obrigatório"},
+  username: {type:String,required: true,message: "nome de usuário é obrigatório"},
   password: {type:String,required: false,message: "senha é obrigatório"},
   photo: {type:String,required: false,message: "foto é obrigatório"},
   bio: {type:String,required: false}

@@ -146,3 +146,27 @@ export async function delete_user_by_email(user:User){
         }
     }
 }
+
+export async function delete_user_by_username(user:User){
+    try {
+
+        const errors = SCHEMA_DELETE_USER_BY_USERNAME.validate(user as any)
+    
+        if (errors.length > 0) {
+            return { error: true, message: errors[0].message, status: 400  }
+        }
+        await connection.connect(CLIENT_DATABASE_CONFIG)
+        await connection.execute(`DELETE FROM users WHERE username = ?;`,[
+            user.username
+        ])
+        await connection.close()
+        return { error: false, message: MESSAGE_SUCCESS_DELETE_USER, status: 200  }
+       
+    } catch (error) {
+        switch (error.message) {
+            default:
+                return { error: true, message: MESSAGE_INTERNAL_SERVER_ERROR, status: 500  }
+                break;
+        }
+    }
+}
