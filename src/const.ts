@@ -65,7 +65,7 @@ export const SCHEMA_DELETE_USER_BY_ID = new Schema({
   bio: {type:String,required: false}
 }) 
 
-export const SCHEMEA_DELETE_USER_BY_EMAIL = new Schema({
+export const SCHEMA_DELETE_USER_BY_EMAIL = new Schema({
   id: {type:Number,required: false,message: "id é obrigatório"},
   name: {type:String,required: false,message: "nome é obrigatório"},
   email: {type:String,required: true,message: "email é obrigatório"},
@@ -75,7 +75,7 @@ export const SCHEMEA_DELETE_USER_BY_EMAIL = new Schema({
   bio: {type:String,required: false}
 }) 
 
-export const SCHEMEA_DELETE_USER_BY_USERNAME = new Schema({
+export const SCHEMA_DELETE_USER_BY_USERNAME = new Schema({
   id: {type:Number,required: false,message: "id é obrigatório"},
   name: {type:String,required: false,message: "nome é obrigatório"},
   email: {type:String,required: true,message: "email é obrigatório"},

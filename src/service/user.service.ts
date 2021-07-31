@@ -13,7 +13,9 @@ import {
     SCHEMEA_UPDATE_USER,
     SCHEMEA_CREATE_USER,
     SCHEMA_DELETE_USER_BY_ID,
-    CLIENT_DATABASE_CONFIG
+    SCHEMA_DELETE_USER_BY_EMAIL,
+    SCHEMA_DELETE_USER_BY_USERNAME,
+    CLIENT_DATABASE_CONFIG,
 } from "../const.ts";
 
 export async function create_user(user:User) {
@@ -108,6 +110,30 @@ export async function delete_user_by_id(user:User){
         await connection.connect(CLIENT_DATABASE_CONFIG)
         await connection.execute(`DELETE FROM users WHERE id = ?;`,[
             user.id
+        ])
+        await connection.close()
+        return { error: false, message: MESSAGE_SUCCESS_DELETE_USER, status: 200  }
+       
+    } catch (error) {
+        switch (error.message) {
+            default:
+                return { error: true, message: MESSAGE_INTERNAL_SERVER_ERROR, status: 500  }
+                break;
+        }
+    }
+}
+
+export async function delete_user_by_email(user:User){
+    try {
+
+        const errors = SCHEMA_DELETE_USER_BY_EMAIL.validate(user as any)
+    
+        if (errors.length > 0) {
+            return { error: true, message: errors[0].message, status: 400  }
+        }
+        await connection.connect(CLIENT_DATABASE_CONFIG)
+        await connection.execute(`DELETE FROM users WHERE email = ?;`,[
+            user.email
         ])
         await connection.close()
         return { error: false, message: MESSAGE_SUCCESS_DELETE_USER, status: 200  }
