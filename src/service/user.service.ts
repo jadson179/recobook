@@ -10,18 +10,21 @@ import {
     MESSAGE_INTERNAL_SERVER_ERROR,
     MESSAGE_SUCCESS_UPDATE_USER,
     MESSAGE_SUCCESS_DELETE_USER,
-    SCHEMEA_UPDATE_USER,
-    SCHEMEA_CREATE_USER,
+    SCHEMA_UPDATE_USER,
+    SCHEMA_CREATE_USER,
     SCHEMA_DELETE_USER_BY_ID,
     SCHEMA_DELETE_USER_BY_EMAIL,
     SCHEMA_DELETE_USER_BY_USERNAME,
+    SCHEMA_READ_USER_BY_USERNAME_AND_PASSWORD,
     CLIENT_DATABASE_CONFIG,
+MESSAGE_SUCCESS_IN_FIND_USER,
+MESSAGE_FAILD_IN_FIND_USER,
 } from "../const.ts";
 
 export async function create_user(user:User) {
    try {
 
-    const errors = SCHEMEA_CREATE_USER.validate(user as any)
+    const errors = SCHEMA_CREATE_USER.validate(user as any)
     
     if (errors.length > 0) {
         return { error: true, message: errors[0].message, status: 400  }
@@ -57,10 +60,38 @@ export async function create_user(user:User) {
     
 }
 
+export async function find_user_by_username_and_password(user:User) {
+    try {
+ 
+     const errors = SCHEMA_READ_USER_BY_USERNAME_AND_PASSWORD.validate(user as any)
+     
+     if (errors.length > 0) {
+         return { error: true, message: errors[0].message, user: null, status: 400  }
+     }
+    await connection.connect(CLIENT_DATABASE_CONFIG)
+    const users: User[] = await connection.query(`SELECT name,email,username,photo,bio FROM users WHERE username = ? and password = ? LIMIT 1`,[ user.username, user.password ])
+    await connection.close()
+    
+    if (users.length == 0) return { error: true, message: MESSAGE_FAILD_IN_FIND_USER, user: null, status: 400  }
+
+    return { error: false, message: MESSAGE_SUCCESS_IN_FIND_USER, user: users[0], status: 201  }
+    
+    } catch (error) {
+         switch (error.message) {
+             default:
+                 return { error: true, message: MESSAGE_INTERNAL_SERVER_ERROR, user: null, status: 500  }
+                 break;
+         }
+ 
+         
+    }
+     
+ }
+
 export async function update_user(user:User) {
     try {
     
-    const errors = SCHEMEA_UPDATE_USER.validate(user as any)
+    const errors = SCHEMA_UPDATE_USER.validate(user as any)
     
     if (errors.length > 0) {
         return { error: true, message: errors[0].message, status: 400  }
@@ -97,7 +128,6 @@ export async function update_user(user:User) {
     }
      
 }
-
 
 export async function delete_user_by_id(user:User){
     try {

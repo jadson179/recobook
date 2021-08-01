@@ -1,13 +1,13 @@
 // deno-lint-ignore-file
-import { assertEquals,assertStrictEquals} from "https://deno.land/std@0.103.0/testing/asserts.ts";
+import { assertEquals,assertStrictEquals,assertExists} from "https://deno.land/std@0.103.0/testing/asserts.ts";
 
-import { create_user, delete_user_by_email, delete_user_by_id, delete_user_by_username, update_user } from '../src/service/user.service.ts'
+import { create_user, delete_user_by_email, delete_user_by_id, delete_user_by_username, update_user,find_user_by_username_and_password } from '../src/service/user.service.ts'
 
 
 
 Deno.test("Deveria criar um usuario", async () => {
     
-    const {error } = await create_user({
+    const { error } = await create_user({
         name: "Jadson dos Santos Silva",
         email: "jadson44.santos@gmail.com",
         username: "15859eb4-f0bb-11eb-aef4-9b77f48ed9b1",
@@ -21,6 +21,19 @@ Deno.test("Deveria criar um usuario", async () => {
     }else {
         assertEquals<boolean>(error,false)
     }
+
+});
+
+Deno.test("Deveria encontrar um usuario pelo username e senha", async () => {
+    
+    const { error,user,message } = await find_user_by_username_and_password ({
+        username: "15859eb4-f0bb-11eb-aef4-9b77f48ed9b1",
+        password: "15859eb4-f0bb-11eb-aef4-9b77f48ed9b1",
+    })
+    console.log(message)
+    assertExists(user)
+    assertEquals<boolean>(error,false)
+    
 
 });
 
@@ -97,7 +110,6 @@ Deno.test("Deveria excluir o usuário pelo username", async () => {
     const { error,message } = await delete_user_by_username({
         username: "15859eb4-f0bb-11eb-aef4-9b77f48ed9b1"
     })
-    console.error(message)
     assertEquals<boolean>(error,false)
 });
 

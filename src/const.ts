@@ -27,13 +27,15 @@ export const MESSAGE_INTERNAL_SERVER_ERROR = "O servidor encontrou uma situaçã
 export const MESSAGE_SUCESS_CREATE_USER = "Novo usuário criado com sucesso"
 export const MESSAGE_USER_ALREADY_EXISTS_EMAIL = "Já existe um usuário com esse email"
 export const MESSAGE_USER_ALREADY_EXISTS_USERNAME = "Já existe um usuário com esse username"
-
 export const MESSAGE_SUCCESS_UPDATE_USER = "Usuário atualizado com sucesso"
-
 export const MESSAGE_SUCCESS_DELETE_USER = "Usuário deletado com sucesso"
+export const MESSAGE_SUCCESS_IN_FIND_USER = "Sucesso em encontrar usuario";
+export const MESSAGE_FAILD_IN_FIND_USER = "Falhou em encontrar usuario, usuário ou senha estão errados"; 
 
 
-export const SCHEMEA_CREATE_USER = new Schema({
+
+
+export const SCHEMA_CREATE_USER = new Schema({
   id: {type:Number,required: false,message: "id é obrigatório"},
   name: {type:String,required: true,message: "nome é obrigatório"},
   email: {type:String,required: true,message: "email é obrigatório"},
@@ -43,8 +45,19 @@ export const SCHEMEA_CREATE_USER = new Schema({
   bio: {type:String,required: false}
 }) 
 
+export const SCHEMA_READ_USER_BY_USERNAME_AND_PASSWORD = new Schema({
+  id: {type:Number,required: false,message: "id é obrigatório"},
+  name: {type:String,required: false,message: "nome é obrigatório"},
+  email: {type:String,required: false,message: "email é obrigatório"},
+  username: {type:String,required: true,message: "nome de usuário é obrigatório"},
+  password: {type:String,required: true,message: "senha é obrigatório"},
+  photo: {type:String,required: false,message: "foto é obrigatório"},
+  bio: {type:String,required: false}
+}) 
 
-export const SCHEMEA_UPDATE_USER = new Schema({
+
+
+export const SCHEMA_UPDATE_USER = new Schema({
   id: {type:Number,required: true,message: "id é obrigatório"},
   name: {type:String,required: true,message: "nome é obrigatório"},
   email: {type:String,required: true,message: "email é obrigatório"},
