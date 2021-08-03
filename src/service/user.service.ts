@@ -68,12 +68,13 @@ export async function find_user_by_username_and_password(user:User) {
      if (errors.length > 0) {
          return { error: true, message: errors[0].message, user: null, status: 400  }
      }
+     
     await connection.connect(CLIENT_DATABASE_CONFIG)
-    const users: User[] = await connection.query(`SELECT name,email,username,photo,bio FROM users WHERE username = ? and password = ? LIMIT 1`,[ user.username, user.password ])
+    const users: User[] = await connection.query(`SELECT id,name,email,username,photo,bio FROM users WHERE username = ? and password = ? LIMIT 1`,[ user.username, user.password ])
     await connection.close()
     
     if (users.length == 0) return { error: true, message: MESSAGE_FAILD_IN_FIND_USER, user: null, status: 400  }
-
+     
     return { error: false, message: MESSAGE_SUCCESS_IN_FIND_USER, user: users[0], status: 201  }
     
     } catch (error) {

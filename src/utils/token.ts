@@ -10,13 +10,14 @@ import {
 } from '../const.ts'
 
 
-export async function createToken<T>(data:T) {
+export async function createToken<T>(data:T,type: "core"|"user") {
     const payload: Payload = {
-        data: data ,
-        exp: 1000000
+        data: data,
+        type: type,
+        exp: Math.floor(Date.now() / 1000) + 3600
     };
       
-    return await create({ alg: "HS512", typ: "JWT" },payload, SERVICE_AUTH_KEY)
+    return await create({ alg: "HS256", typ: "JWT" },payload, SERVICE_AUTH_KEY)
 }
 
 export async function verifyToken(token:string) {

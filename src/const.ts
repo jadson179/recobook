@@ -19,8 +19,7 @@ export const CLIENT_DATABASE_CONFIG:ClientConfig = {
   charset: "utf8"
 }
 
-export const SERVICE_AUTH_KEY = Deno.env.get("SERVICE_AUTH_KEY") as string
-
+export const SERVICE_AUTH_KEY = Deno.env.get("SERVICE_AUTH_KEY") as string 
 
 export const MESSAGE_INTERNAL_SERVER_ERROR = "O servidor encontrou uma situação com a qual não sabe lidar"
 export const MESSAGE_SUCESS_CREATE_USER = "Novo usuário criado com sucesso"
@@ -30,7 +29,7 @@ export const MESSAGE_SUCCESS_UPDATE_USER = "Usuário atualizado com sucesso"
 export const MESSAGE_SUCCESS_DELETE_USER = "Usuário deletado com sucesso"
 export const MESSAGE_SUCCESS_IN_FIND_USER = "Sucesso em encontrar usuario";
 export const MESSAGE_FAILD_IN_FIND_USER = "Falhou em encontrar usuario, usuário ou senha estão errados"; 
-
+export const MESSAGE_UNAUTHORIZED = "Não autorizado"
 
 
 

@@ -38,3 +38,16 @@ export interface IVideo {
     url: string;
     id_elo: number;
 }
+
+export interface Payload {
+    data: {
+      id: number;
+      name: string,
+      email: string,
+      username: string,
+      photo: string,
+      bio: string
+    },
+    type: string,
+    exp: number
+}

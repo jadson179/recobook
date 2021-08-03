@@ -1,4 +1,4 @@
 dev:
-	deno run --allow-all --watch src/main.ts
+	SERVICE_AUTH_KEY=teste deno run --allow-all --watch src/main.ts
 teste:
-	deno test --allow-all --quiet ./test
+	SERVICE_AUTH_KEY=teste deno test --allow-all --quiet ./test

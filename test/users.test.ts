@@ -30,7 +30,6 @@ Deno.test("Deveria encontrar um usuario pelo username e senha", async () => {
         username: "15859eb4-f0bb-11eb-aef4-9b77f48ed9b1",
         password: "15859eb4-f0bb-11eb-aef4-9b77f48ed9b1",
     })
-    console.log(message)
     assertExists(user)
     assertEquals<boolean>(error,false)
     
