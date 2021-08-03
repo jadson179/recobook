@@ -34,9 +34,9 @@ export interface ILike {
 } 
 
 export interface IVideo {
-    id: number;
-    url: string;
-    id_elo: number;
+    id?: number;
+    url?: string;
+    id_elo?: number;
 }
 export interface IImage {
     id?: number;

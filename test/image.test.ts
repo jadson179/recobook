@@ -11,7 +11,7 @@ Deno.test("Deveria adicionar uma imagem no elo 4", async () => {
         url: "http://0.0.0.0:1993/image/jadson.png",
         id_elo: 4
     })
-    console.log(message)
+    
     assertEquals<boolean>(error,false)
 
 });

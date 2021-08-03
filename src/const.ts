@@ -151,3 +151,11 @@ export const SCHEMA_CREATE_IMAGE = new Schema({
   url: {type:String,required: true,message: "url é obrigatório"},
   id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"}
 }) 
+
+export const MESSAGE_SUCESS_CREATE_VIDEO = "Novo video criado com sucesso"
+
+export const SCHEMA_CREATE_VIDEO = new Schema({
+  id: {type:Number,required: false,message: "id é obrigatório"},
+  url: {type:String,required: true,message: "url é obrigatório"},
+  id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"}
+}) 
