@@ -11,6 +11,9 @@ import {
 SCHEMA_UPDATE_ELO,
 SCHEMA_DELETE_ELO_BY_ID,
 MESSAGE_SUCCESS_DELETE_ELO,
+SCHEMA_FIND_ELO_BY_ID,
+MESSAGE_SUCCESS_IN_FIND_ELO,
+MESSAGE_FAILD_IN_FIND_ELO,
 } from '../const.ts'
 
 
@@ -43,6 +46,36 @@ export async function create_elo(elo:Elo) {
         }
     }
 }
+export async function find_elo_by_id(elo:Elo) {
+    try {
+ 
+     const errors = SCHEMA_FIND_ELO_BY_ID.validate(elo as any)
+     
+     if (errors.length > 0) {
+         return { error: true, message: errors[0].message, user: null, status: 400  }
+     }
+     
+    await connection.connect(CLIENT_DATABASE_CONFIG)
+    const elos: Elo[] = await connection.query(`SELECT id,description,qtd_likes,qtd_comments,category,address,id_user FROM elos WHERE id = ? LIMIT 1`,[ elo.id ])
+    await connection.close()
+    
+    if (elos.length == 0) return { error: true, message: MESSAGE_FAILD_IN_FIND_ELO, elo: null, status: 400  }
+     
+    return { error: false, message: MESSAGE_SUCCESS_IN_FIND_ELO, elo: elos[0], status: 201  }
+    
+    } catch (error) {
+         switch (error.message) {
+             default:
+                 return { error: true, message: MESSAGE_INTERNAL_SERVER_ERROR, elo: null, status: 500  }
+                 break;
+         }
+ 
+         
+    }
+     
+ }
+
+
 export async function update_elo(elo:Elo) {
     try {
         const errors = SCHEMA_UPDATE_ELO.validate(elo as any)
