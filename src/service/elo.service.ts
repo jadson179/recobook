@@ -23,7 +23,7 @@ export async function create_elo(elo:Elo) {
     }
     
     await connection.connect(CLIENT_DATABASE_CONFIG)
-    await connection.execute(`INSERT INTO elos VALUES (NULL,?,?,?,?,?,?);`,[
+   const {lastInsertId} = await connection.execute(`INSERT INTO elos VALUES (NULL,?,?,?,?,?,?);`,[
         elo.description,
         0,
         0,
@@ -33,12 +33,12 @@ export async function create_elo(elo:Elo) {
     ])
     await connection.close()
     
-    return { error: false, message: MESSAGE_SUCESS_CREATE_ELO, status: 201  }
+    return { error: false, message: MESSAGE_SUCESS_CREATE_ELO, id: lastInsertId, status: 201  }
 
     } catch (error) {
         switch (error.message) {
             default:
-                return { error: true, message: MESSAGE_INTERNAL_SERVER_ERROR, status: 500  }
+                return { error: true, message: MESSAGE_INTERNAL_SERVER_ERROR, id: undefined , status: 500  }
                 break;
         }
     }

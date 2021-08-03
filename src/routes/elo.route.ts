@@ -22,10 +22,10 @@ routes.post("/elo", async ({request,response})=>{
 
         if(payload.data.id != elo.id_user) throw new Error(MESSAGE_UNAUTHORIZED);
 
-        const {error,message,status} = await create_elo(elo)
+        const {error,message,status,id} = await create_elo(elo)
 
         response.status = status
-        response.body = {error,message}
+        response.body = {error,message,id}
     } catch (error) {
         response.status = 401
         response.body = {error: true,message: error.message}
@@ -33,7 +33,9 @@ routes.post("/elo", async ({request,response})=>{
 
 })
 
-routes.put("/elo/:id",()=>{})
+routes.put("/elo/:id",()=>{
+
+})
 routes.delete("/elo/:id",()=>{})
 
 export default routes
