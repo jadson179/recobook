@@ -52,7 +52,7 @@ export async function find_elo_by_id(elo:Elo) {
      const errors = SCHEMA_FIND_ELO_BY_ID.validate(elo as any)
      
      if (errors.length > 0) {
-         return { error: true, message: errors[0].message, user: null, status: 400  }
+         return { error: true, message: errors[0].message, elo: null, status: 400  }
      }
      
     await connection.connect(CLIENT_DATABASE_CONFIG)
