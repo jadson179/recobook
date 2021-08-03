@@ -10,13 +10,13 @@ export interface IUser {
 }
 
 export interface IElo {
-    id: number;
-    description: string;
-    category: string;
-    address: string;
-    qtd_likes: number;
-    qtd_comments: number;
-    id_user: number;
+    id?: number;
+    description?: string;
+    category?: string;
+    address?: string;
+    qtd_likes?: number;
+    qtd_comments?: number;
+    id_user?: number;
 }
 
 export interface IComment {
