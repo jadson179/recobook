@@ -38,7 +38,7 @@ routes.put('/user/:id',async ({request,response,params})=>{
     
         user.id = id
         
-        console.log(user)
+        
         const  {error,message,status} = await update_user(user)
         
         response.status = status
