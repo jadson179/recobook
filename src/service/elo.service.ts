@@ -92,8 +92,9 @@ export async function delete_elo_by_id(elo:Elo) {
             return { error: true, message: errors[0].message, status: 400  }
         }
         await connection.connect(CLIENT_DATABASE_CONFIG)
-        await connection.execute(`DELETE FROM elos WHERE id = ?;`,[
-            elo.id
+        await connection.execute(`DELETE FROM elos WHERE id = ? AND id_user = ? ;`,[
+            elo.id,
+            elo.id_user
         ])
         await connection.close()
         return { error: false, message: MESSAGE_SUCCESS_DELETE_ELO, status: 200  }
