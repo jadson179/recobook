@@ -9,6 +9,8 @@ import {
     SCHEMA_CREATE_ELO,
     CLIENT_DATABASE_CONFIG,
 SCHEMA_UPDATE_ELO,
+SCHEMA_DELETE_ELO_BY_ID,
+MESSAGE_SUCCESS_DELETE_ELO,
 } from '../const.ts'
 
 
@@ -81,4 +83,27 @@ export async function update_elo(elo:Elo) {
             }
         }
 }
-export async function delete_elo(elo:Elo) {}
+export async function delete_elo_by_id(elo:Elo) {
+    try {
+
+        const errors = SCHEMA_DELETE_ELO_BY_ID.validate(elo as any)
+    
+        if (errors.length > 0) {
+            return { error: true, message: errors[0].message, status: 400  }
+        }
+        await connection.connect(CLIENT_DATABASE_CONFIG)
+        await connection.execute(`DELETE FROM elos WHERE id = ?;`,[
+            elo.id
+        ])
+        await connection.close()
+        return { error: false, message: MESSAGE_SUCCESS_DELETE_ELO, status: 200  }
+       
+    } catch (error) {
+        switch (error.message) {
+            default:
+                return { error: true, message: MESSAGE_INTERNAL_SERVER_ERROR, status: 500  }
+                break;
+        }
+    }
+
+}

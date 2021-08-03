@@ -99,6 +99,7 @@ export const SCHEMA_DELETE_USER_BY_USERNAME = new Schema({
 
 export const MESSAGE_SUCESS_CREATE_ELO = "Novo elo criado com sucesso"
 export const MESSAGE_SUCESS_UPDATE_ELO = "Elo atualizado com sucesso"
+export const MESSAGE_SUCCESS_DELETE_ELO = "ELo deletado com sucesso"
 
 
 export const SCHEMA_CREATE_ELO = new Schema({
@@ -119,4 +120,14 @@ export const SCHEMA_UPDATE_ELO = new Schema({
   qtd_likes: {type:Number,required: false},
   qtd_comments: {type:Number,required: false},
   id_user: {type:Number,required: true, message: "identificação de um usuário é obrigatório"}
+}) 
+
+export const SCHEMA_DELETE_ELO_BY_ID = new Schema({
+  id: {type:Number,required: true,message: "id é obrigatório"},
+  description: {type:String,required: false,message: "descrição é obrigatório"},
+  category: {type:String,required: false,message: "categoria é obrigatório"},
+  address: {type:String,required: false,message: "endereço é obrigatório"},
+  qtd_likes: {type:Number,required: false},
+  qtd_comments: {type:Number,required: false},
+  id_user: {type:Number,required: false, message: "identificação de um usuário é obrigatório"}
 }) 
