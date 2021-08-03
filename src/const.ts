@@ -141,4 +141,13 @@ export const SCHEMA_FIND_ELO_BY_ID = new Schema({
   qtd_likes: {type:Number,required: false},
   qtd_comments: {type:Number,required: false},
   id_user: {type:Number,required: false, message: "identificação de um usuário é obrigatório"}
+})
+
+
+export const MESSAGE_SUCESS_CREATE_IMAGE = "Nova imagem criada com sucesso"
+
+export const SCHEMA_CREATE_IMAGE = new Schema({
+  id: {type:Number,required: true,message: "id é obrigatório"},
+  url: {type:String,required: true,message: "url é obrigatório"},
+  id_user: {type:Number,required: true, message: "identificação de um usuário é obrigatório"}
 }) 

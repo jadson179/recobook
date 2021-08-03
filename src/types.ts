@@ -38,6 +38,11 @@ export interface IVideo {
     url: string;
     id_elo: number;
 }
+export interface IImage {
+    id?: number;
+    url?: string;
+    id_elo?: number;
+}
 
 export interface Payload {
     data: {
