@@ -147,7 +147,7 @@ export const SCHEMA_FIND_ELO_BY_ID = new Schema({
 export const MESSAGE_SUCESS_CREATE_IMAGE = "Nova imagem criada com sucesso"
 
 export const SCHEMA_CREATE_IMAGE = new Schema({
-  id: {type:Number,required: true,message: "id é obrigatório"},
+  id: {type:Number,required: false,message: "id é obrigatório"},
   url: {type:String,required: true,message: "url é obrigatório"},
-  id_user: {type:Number,required: true, message: "identificação de um usuário é obrigatório"}
+  id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"}
 }) 
