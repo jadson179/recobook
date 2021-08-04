@@ -1,11 +1,12 @@
 // deno-lint-ignore-file
-import { assertEquals, assertExists} from "https://deno.land/std@0.103.0/testing/asserts.ts";
+import { assert, assertEquals, assertExists} from "https://deno.land/std@0.103.0/testing/asserts.ts";
 
 import {
     create_elo,
     update_elo,
     delete_elo_by_id,
-    find_elo_by_id
+    find_elo_by_id,
+    search_elos
 } from '../src/service/elo.service.ts'
 
 Deno.test("Deveria criar um elo", async () => {
@@ -31,6 +32,25 @@ Deno.test("Deveria encontrar um elo por id", async () => {
     assertEquals<boolean>(error,false)
 
 });
+
+Deno.test("Deveria pesquisar um elo pela busca ", async () => {
+    
+    const { error, elos,message } = await search_elos(
+        {
+        address: "%Almirante%",
+        qtd_comments: 0,
+        qtd_likes: 0,
+        category: "caro",
+        description: "%%",
+        },
+        0
+    )
+
+    assert(elos.length > 0)
+    assertEquals<boolean>(error,false)
+
+});
+
 
 Deno.test("Deveria atualiza um elo", async () => {
     

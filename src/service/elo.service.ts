@@ -70,28 +70,32 @@ export async function search_elos(elo:Elo,offset:number) {
         id_user 
     FROM elos 
     WHERE 
-        address LIKE "%?%" AND
-        category = "?" AND 
-        description LIKE "%?%" AND 
+        address LIKE ? AND
+        category = ? AND 
+        description LIKE ? AND 
         qtd_likes >= ? AND 
         qtd_comments >= ?
     ORDER BY id DESC
-    LIMIT 5`,
+    LIMIT 5
+    OFFSET ?
+    `,
     [ 
         elo.address,
         elo.category,
         elo.description,
         elo.qtd_likes,
-        elo.qtd_comments
+        elo.qtd_comments,
+        offset
     ]
     )
     await connection.close()
-    
+    console.log(elos)
     if (elos.length == 0) return { error: true, message: MESSAGE_FAILD_IN_SEARCH_ELOS, elos: [], status: 400  }
      
     return { error: false, message: MESSAGE_SUCESS_IN_SEARCH_ELOS, elos: elos, status: 201  }
     
     } catch (error) {
+        
          switch (error.message) {
              default:
                  return { error: true, message: MESSAGE_INTERNAL_SERVER_ERROR, elos: [], status: 500  }

@@ -145,12 +145,12 @@ export const SCHEMA_FIND_ELO_BY_ID = new Schema({
 })
 
 export const SCHEMA_SEARCH_ELOS = new Schema({
-  id: {type:Number,required: true,message: "id é obrigatório"},
+  id: {type:Number,required: false,message: "id é obrigatório"},
   description: {type:String,required: false,message: "descrição é obrigatório"},
-  category: {type:String,required: false,message: "categoria é obrigatório"},
+  category: {type:String,required: true,message: "categoria é obrigatório"},
   address: {type:String,required: true,message: "endereço é obrigatório"},
-  qtd_likes: {type:Number,required: false},
-  qtd_comments: {type:Number,required: false},
+  qtd_likes: {type:Number,required: true},
+  qtd_comments: {type:Number,required: true},
   id_user: {type:Number,required: false, message: "identificação de um usuário é obrigatório"}
 }) 
 
