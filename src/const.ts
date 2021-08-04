@@ -21,7 +21,7 @@ export const CLIENT_DATABASE_CONFIG:ClientConfig = {
 
 export const SERVICE_AUTH_KEY = Deno.env.get("SERVICE_AUTH_KEY") as string 
 
-export const MESSAGE_INTERNAL_SERVER_ERROR = "O servidor encontrou uma situação com a qual não sabe lidar"
+export const MESSAGE_INTERNAL_SERVER_ERROR = "O servidor encontrou uma situação com a qual não sabe lidar 🤯"
 export const MESSAGE_SUCESS_CREATE_USER = "Novo usuário criado com sucesso"
 export const MESSAGE_USER_ALREADY_EXISTS_EMAIL = "Já existe um usuário com esse email"
 export const MESSAGE_USER_ALREADY_EXISTS_USERNAME = "Já existe um usuário com esse username"
@@ -29,7 +29,7 @@ export const MESSAGE_SUCCESS_UPDATE_USER = "Usuário atualizado com sucesso"
 export const MESSAGE_SUCCESS_DELETE_USER = "Usuário deletado com sucesso"
 export const MESSAGE_SUCCESS_IN_FIND_USER = "Sucesso em encontrar usuario";
 export const MESSAGE_FAILD_IN_FIND_USER = "Falhou em encontrar usuario, usuário ou senha estão errados"; 
-export const MESSAGE_UNAUTHORIZED = "Não autorizado"
+export const MESSAGE_UNAUTHORIZED = "Não autorizado ✋🚫"
 
 
 
@@ -102,7 +102,7 @@ export const MESSAGE_SUCCESS_DELETE_ELO = "ELo deletado com sucesso"
 export const MESSAGE_SUCCESS_IN_FIND_ELO = "Sucesso em encontrar elo";
 export const MESSAGE_FAILD_IN_FIND_ELO = "Falhou em encontrar elo"; 
 export const MESSAGE_SUCESS_IN_SEARCH_ELOS = "Sucesso em pesquisar elos"
-export const MESSAGE_FAILD_IN_SEARCH_ELOS = "Sucesso em pesquisar elos"
+export const MESSAGE_FAILD_IN_SEARCH_ELOS = "Não encontramos nenhum elo com esses filtros 😩"
 
 export const SCHEMA_CREATE_ELO = new Schema({
   id: {type:Number,required: false,message: "id é obrigatório"},
