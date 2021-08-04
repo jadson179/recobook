@@ -89,10 +89,10 @@ export async function search_elos(elo:Elo,offset:number) {
     ]
     )
     await connection.close()
-    console.log(elos)
+    
     if (elos.length == 0) return { error: true, message: MESSAGE_FAILD_IN_SEARCH_ELOS, elos: [], status: 400  }
      
-    return { error: false, message: MESSAGE_SUCESS_IN_SEARCH_ELOS, elos: elos, status: 201  }
+    return { error: false, message: MESSAGE_SUCESS_IN_SEARCH_ELOS, elos: elos, status: 200  }
     
     } catch (error) {
         
