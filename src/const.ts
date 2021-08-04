@@ -54,7 +54,6 @@ export const SCHEMA_READ_USER_BY_USERNAME_AND_PASSWORD = new Schema({
 }) 
 
 
-
 export const SCHEMA_UPDATE_USER = new Schema({
   id: {type:Number,required: true,message: "id é obrigatório"},
   name: {type:String,required: true,message: "nome é obrigatório"},
@@ -102,6 +101,8 @@ export const MESSAGE_SUCESS_UPDATE_ELO = "Elo atualizado com sucesso"
 export const MESSAGE_SUCCESS_DELETE_ELO = "ELo deletado com sucesso"
 export const MESSAGE_SUCCESS_IN_FIND_ELO = "Sucesso em encontrar elo";
 export const MESSAGE_FAILD_IN_FIND_ELO = "Falhou em encontrar elo"; 
+export const MESSAGE_SUCESS_IN_SEARCH_ELOS = "Sucesso em pesquisar elos"
+export const MESSAGE_FAILD_IN_SEARCH_ELOS = "Sucesso em pesquisar elos"
 
 export const SCHEMA_CREATE_ELO = new Schema({
   id: {type:Number,required: false,message: "id é obrigatório"},
@@ -143,6 +144,17 @@ export const SCHEMA_FIND_ELO_BY_ID = new Schema({
   id_user: {type:Number,required: false, message: "identificação de um usuário é obrigatório"}
 })
 
+export const SCHEMA_SEARCH_ELOS = new Schema({
+  id: {type:Number,required: true,message: "id é obrigatório"},
+  description: {type:String,required: false,message: "descrição é obrigatório"},
+  category: {type:String,required: false,message: "categoria é obrigatório"},
+  address: {type:String,required: true,message: "endereço é obrigatório"},
+  qtd_likes: {type:Number,required: false},
+  qtd_comments: {type:Number,required: false},
+  id_user: {type:Number,required: false, message: "identificação de um usuário é obrigatório"}
+}) 
+
+
 
 export const MESSAGE_SUCESS_CREATE_IMAGE = "Nova imagem criada com sucesso"
 
@@ -159,3 +171,4 @@ export const SCHEMA_CREATE_VIDEO = new Schema({
   url: {type:String,required: true,message: "url é obrigatório"},
   id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"}
 }) 
+

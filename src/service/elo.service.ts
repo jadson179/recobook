@@ -14,6 +14,9 @@ MESSAGE_SUCCESS_DELETE_ELO,
 SCHEMA_FIND_ELO_BY_ID,
 MESSAGE_SUCCESS_IN_FIND_ELO,
 MESSAGE_FAILD_IN_FIND_ELO,
+SCHEMA_SEARCH_ELOS,
+MESSAGE_SUCESS_IN_SEARCH_ELOS,
+MESSAGE_FAILD_IN_SEARCH_ELOS,
 } from '../const.ts'
 
 
@@ -46,6 +49,58 @@ export async function create_elo(elo:Elo) {
         }
     }
 }
+export async function search_elos(elo:Elo,offset:number) {
+    try {
+ 
+     const errors = SCHEMA_SEARCH_ELOS.validate(elo as any)
+     
+     if (errors.length > 0) {
+         return { error: true, message: errors[0].message, elos: [], status: 400  }
+     }
+     
+    await connection.connect(CLIENT_DATABASE_CONFIG)
+    const elos: Elo[] = await connection.query(`
+    SELECT
+        id,
+        description,
+        qtd_likes,
+        qtd_comments,
+        category,
+        address,
+        id_user 
+    FROM elos 
+    WHERE 
+        address LIKE "%?%" AND
+        category = "?" AND 
+        description LIKE "%?%" AND 
+        qtd_likes >= ? AND 
+        qtd_comments >= ?
+    ORDER BY id DESC
+    LIMIT 5`,
+    [ 
+        elo.address,
+        elo.category,
+        elo.description,
+        elo.qtd_likes,
+        elo.qtd_comments
+    ]
+    )
+    await connection.close()
+    
+    if (elos.length == 0) return { error: true, message: MESSAGE_FAILD_IN_SEARCH_ELOS, elos: [], status: 400  }
+     
+    return { error: false, message: MESSAGE_SUCESS_IN_SEARCH_ELOS, elos: elos, status: 201  }
+    
+    } catch (error) {
+         switch (error.message) {
+             default:
+                 return { error: true, message: MESSAGE_INTERNAL_SERVER_ERROR, elos: [], status: 500  }
+                 break;
+        }         
+    }
+     
+ }
+
 export async function find_elo_by_id(elo:Elo) {
     try {
  
