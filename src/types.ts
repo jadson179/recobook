@@ -27,10 +27,9 @@ export interface IComment {
 }
 
 export interface ILike {
-    id: number;
-    content: string;
-    id_elo: number;
-    id_user: number;
+    id?: number;
+    id_elo?: number;
+    id_user?: number;
 } 
 
 export interface IVideo {

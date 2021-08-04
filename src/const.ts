@@ -172,3 +172,10 @@ export const SCHEMA_CREATE_VIDEO = new Schema({
   id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"}
 }) 
 
+export const MESSAGE_SUCESS_CREATE_LIKE_IN_ELO = "Sucesso em registrar like"
+
+export const SCHEMA_CREATE_LIKE_IN_ELO = new Schema({
+  id: {type:Number,required: false,message: "id é obrigatório"},
+  id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"},
+  id_user: {type:Number,required: true, message: "identificação de um usuario é obrigatório"}
+}) 

@@ -6,8 +6,8 @@ import  Image from '../model/image.model.ts'
 import {
     SCHEMA_CREATE_IMAGE,
     CLIENT_DATABASE_CONFIG,
-MESSAGE_INTERNAL_SERVER_ERROR,
-MESSAGE_SUCESS_CREATE_IMAGE
+    MESSAGE_INTERNAL_SERVER_ERROR,
+    MESSAGE_SUCESS_CREATE_IMAGE
 } from '../const.ts'
 
 
@@ -20,6 +20,8 @@ export async function create_image(image:Image) {
         }
 
         await connection.connect(CLIENT_DATABASE_CONFIG)
+
+        
         await connection.execute(`INSERT INTO images VALUES (NULL,?,?);`,[
             image.url,
             image.id_elo
