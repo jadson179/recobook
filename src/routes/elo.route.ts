@@ -4,13 +4,47 @@ import { Router } from 'https://deno.land/x/oak@v8.0.0/mod.ts'
 import { MESSAGE_UNAUTHORIZED } from "../const.ts";
 import Elo from "../model/elo.model.ts";
 
-import {create_elo,update_elo,delete_elo_by_id} from '../service/elo.service.ts'
+import {create_elo,update_elo,delete_elo_by_id,search_elos} from '../service/elo.service.ts'
 import { Payload } from "../types.ts";
 import { verifyToken } from "../utils/token.ts";
 
 const routes = new Router()
 
 
+
+routes.get("/elos", async ({request,response})=>{
+    try {
+        
+        await verifyToken(
+            request.headers.get('authorization') as string
+        ) as unknown as Payload
+        
+        const address = request.url.searchParams.get("address") || "%Almirante%"
+        const qtd_comments = request.url.searchParams.get("qtd_comments") || 0
+        const qtd_likes = request.url.searchParams.get("qtd_likes") || 0
+        const category = request.url.searchParams.get("category") || "muito caro"
+        const description = request.url.searchParams.get("description") || "%%" 
+        const offset = request.url.searchParams.get("offset") || 0
+        
+        const elo = new Elo()
+        elo.address = address
+        elo.qtd_comments = Number(qtd_comments)
+        elo.qtd_likes =  Number(qtd_likes)
+        elo.category = category
+        elo.description = description
+        
+        console.log(elo)
+        
+        const {error,message,status,elos} = await search_elos(elo,Number(offset))
+
+        response.status = status
+        response.body = {error,message,elos}
+    } catch (error) {
+        response.status = 401
+        response.body = {error: true,message: error.message}
+    }    
+
+})
 
 routes.post("/elo", async ({request,response})=>{
     try {
