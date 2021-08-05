@@ -18,7 +18,7 @@ import {
 } from '../const.ts'
 
 
-export async function search_elos(comment:Comment,offset:number) {
+export async function search_comments(comment:Comment,offset:number) {
     try {
  
      const errors = SCHEMA_SEARCH_COMMENT_IN_ELO.validate(comment as any)

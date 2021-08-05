@@ -165,12 +165,19 @@ export const SCHEMA_SEARCH_ELOS = new Schema({
 
 
 export const MESSAGE_SUCESS_CREATE_IMAGE = "Nova imagem criada com sucesso"
+export const MESSAGE_SUCESS_SEARCH_IMAGE = "Sucesso em encontrar image(s) para este elo"
+export const MESSAGE_FAILD_SEARCH_IMAGE = "Falhou em encontrar image(s) para este elo"
 
 export const SCHEMA_CREATE_IMAGE = new Schema({
   id: {type:Number,required: false,message: "id é obrigatório"},
   url: {type:String,required: true,message: "url é obrigatório"},
   id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"}
 }) 
+
+export const SCHEMA_SEARCH_IMAGES_IN_ELO = new Schema({
+  id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"},
+}) 
+
 
 export const MESSAGE_SUCESS_CREATE_VIDEO = "Novo video criado com sucesso"
 
