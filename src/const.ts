@@ -10,6 +10,13 @@ export const DATABASE_PASSWORD = "root";
 export const DATABASE_NAME = "core";
 export const DATABASE_PORT = 3306;
 
+export const CLIENT_SMTP_HOSTNAME = "smtp.gmail.com";
+export const CLIENT_SMTP_PORT = 25
+export const CLIENT_SMTP_USERNAME = Deno.env.get("CLIENT_SMTP_USERNAME") as string || "";
+export const CLIENT_SMTP_PASSWORD = Deno.env.get("CLIENT_SMTP_PASSWORD") as string || "";
+export const CLIENT_SMTP_EMAIL = Deno.env.get("CLIENT_SMTP_EMAIL") as string || "";
+
+
 export const CLIENT_DATABASE_CONFIG:ClientConfig = {
   hostname: DATABASE_HOST,
   username: DATABASE_USERNAME,
