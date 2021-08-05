@@ -180,11 +180,18 @@ export const SCHEMA_SEARCH_IMAGES_IN_ELO = new Schema({
 
 
 export const MESSAGE_SUCESS_CREATE_VIDEO = "Novo video criado com sucesso"
+export const MESSAGE_SUCESS_SEARCH_VIDEO = "Sucesso em encontrar video(s) para este elo"
+export const MESSAGE_FAILD_SEARCH_VIDEO = "Falhou em encontrar video(s) para este elo"
 
 export const SCHEMA_CREATE_VIDEO = new Schema({
   id: {type:Number,required: false,message: "id é obrigatório"},
   url: {type:String,required: true,message: "url é obrigatório"},
   id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"}
+}) 
+
+
+export const SCHEMA_SEARCH_VIDEOS_IN_ELO = new Schema({
+  id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"},
 }) 
 
 export const MESSAGE_SUCESS_CREATE_LIKE_IN_ELO = "Sucesso em registrar like"
