@@ -9,6 +9,10 @@ services:
         - ./src:/app
     environment: 
       SERVICE_AUTH_KEY: "teste"
+      CLIENT_SMTP_USERNAME: ""
+      CLIENT_SMTP_PASSWORD: ""
+      CLIENT_SMTP_EMAIL: ""
+      
 
 
   dobby: 
