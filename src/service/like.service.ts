@@ -33,11 +33,11 @@ export async function register_like_in_elo(like:Like) {
                 like.id_elo,
                 like.id_user
             ])
-            
-            await conn.execute(`UPDATE elos SET qtd_likes = ? WHERE ID = ? `,[
+            await conn.execute(`UPDATE elos SET qtd_likes = ? WHERE id = ? `,[
                 qtd_likes,
                 like.id_elo
             ])
+            
 
         }else {
             await connection.execute(`DELETE FROM likes WHERE id_elo = ? AND id_user = ? `,[
@@ -46,7 +46,7 @@ export async function register_like_in_elo(like:Like) {
             ])
             
             
-            await conn.execute(`UPDATE elos SET qtd_likes = ? WHERE ID = ? `,[
+            await conn.execute(`UPDATE elos SET qtd_likes = ? WHERE id = ? `,[
                 qtd_likes,
                 like.id_elo
             ])
