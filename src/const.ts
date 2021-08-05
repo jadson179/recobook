@@ -187,3 +187,26 @@ export const SCHEMA_CREATE_LIKE_IN_ELO = new Schema({
   id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"},
   id_user: {type:Number,required: true, message: "identificação de um usuario é obrigatório"}
 }) 
+
+export const MESSAGE_SUCESS_CREATE_COMMENT_IN_ELO = "Sucesso em criar comentário"
+export const MESSAGE_SUCESS_UPDATE_COMMENT_IN_ELO = "Sucesso em atualizar comentário"
+export const MESSAGE_SUCESS_DELETE_COMMENT_IN_ELO = "Sucesso em excluir o comentário"
+
+
+export const SCHEMA_CREATE_COMMENT_IN_ELO = new Schema({
+  id: {type:Number,required: false,message: "id é obrigatório"},
+  content:{type: String,required: true,message: "conteúdo é obrigatório"}, 
+  id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"},
+  id_user: {type:Number,required: true, message: "identificação de um usuario é obrigatório"}
+}) 
+
+export const SCHEMA_UPDATE_COMMENT_IN_ELO = new Schema({
+  id: {type:Number,required: true,message: "id é obrigatório"},
+  content:{type: String,required: true,message: "conteúdo é obrigatório"}, 
+  id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"},
+  id_user: {type:Number,required: true, message: "identificação de um usuario é obrigatório"}
+}) 
+
+export const SCHEMA_DELETE_COMMENT_IN_ELO = new Schema({
+  id: {type:Number,required: true,message: "id é obrigatório"},
+}) 

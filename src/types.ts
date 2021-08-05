@@ -20,10 +20,10 @@ export interface IElo {
 }
 
 export interface IComment {
-    id: number;
-    content: string;
-    id_elo: number;
-    id_user: number;
+    id?: number;
+    content?: string;
+    id_elo?: number;
+    id_user?: number;
 }
 
 export interface ILike {
