@@ -191,6 +191,8 @@ export const SCHEMA_CREATE_LIKE_IN_ELO = new Schema({
 export const MESSAGE_SUCESS_CREATE_COMMENT_IN_ELO = "Sucesso em criar comentário"
 export const MESSAGE_SUCESS_UPDATE_COMMENT_IN_ELO = "Sucesso em atualizar comentário"
 export const MESSAGE_SUCESS_DELETE_COMMENT_IN_ELO = "Sucesso em excluir o comentário"
+export const MESSAGE_SUCESS_SEARCH_COMMENT_IN_ELO = "Sucesso em econtrar os comentários"
+export const MESSAGE_FAILD_SEARCH_COMMENT_IN_ELO = "Não encontramos nenhum comentário neste elo 😩"
 
 
 export const SCHEMA_CREATE_COMMENT_IN_ELO = new Schema({
@@ -209,4 +211,8 @@ export const SCHEMA_UPDATE_COMMENT_IN_ELO = new Schema({
 
 export const SCHEMA_DELETE_COMMENT_IN_ELO = new Schema({
   id: {type:Number,required: true,message: "id é obrigatório"},
+}) 
+
+export const SCHEMA_SEARCH_COMMENT_IN_ELO = new Schema({
+  id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"},
 }) 
