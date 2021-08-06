@@ -33,7 +33,6 @@ routes.get("/elos", async ({request,response})=>{
         elo.category = category
         elo.description = description
         
-        console.log(elo)
         
         const {error,message,status,elos} = await search_elos(elo,Number(offset))
 
