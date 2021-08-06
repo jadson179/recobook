@@ -19,6 +19,8 @@ import {
     SCHEMA_DELETE_USER_BY_USERNAME,
     SCHEMA_READ_USER_BY_USERNAME_AND_PASSWORD,
     CLIENT_DATABASE_CONFIG,
+SCHEMA_READ_USER_BY_EMAIL,
+MESSAGE_FAILD_IN_FIND_USER_BY_EMAIL
 } from "../const.ts";
 
 export async function create_user(user:User) {
@@ -74,6 +76,34 @@ export async function find_user_by_username_and_password(user:User) {
     await connection.close()
     
     if (users.length == 0) return { error: true, message: MESSAGE_FAILD_IN_FIND_USER, user: null, status: 400  }
+     
+    return { error: false, message: MESSAGE_SUCCESS_IN_FIND_USER, user: users[0], status: 201  }
+    
+    } catch (error) {
+         switch (error.message) {
+             default:
+                 return { error: true, message: MESSAGE_INTERNAL_SERVER_ERROR, user: null, status: 500  }
+                 break;
+         }
+ 
+         
+    }
+     
+ }
+ export async function find_user_by_email(user:User) {
+    try {
+ 
+     const errors = SCHEMA_READ_USER_BY_EMAIL.validate(user as any)
+     
+     if (errors.length > 0) {
+         return { error: true, message: errors[0].message, user: null, status: 400  }
+     }
+     
+    await connection.connect(CLIENT_DATABASE_CONFIG)
+    const users: User[] = await connection.query(`SELECT id,name,email,username,password,photo,bio FROM users WHERE email = ? LIMIT 1`,[ user.email ])
+    await connection.close()
+    
+    if (users.length == 0) return { error: true, message: MESSAGE_FAILD_IN_FIND_USER_BY_EMAIL, user: null, status: 400  }
      
     return { error: false, message: MESSAGE_SUCCESS_IN_FIND_USER, user: users[0], status: 201  }
     

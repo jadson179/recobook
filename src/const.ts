@@ -10,12 +10,8 @@ export const DATABASE_PASSWORD = "root";
 export const DATABASE_NAME = "core";
 export const DATABASE_PORT = 3306;
 
-export const CLIENT_SMTP_HOSTNAME = "smtp.gmail.com";
-export const CLIENT_SMTP_PORT = 465;
-export const CLIENT_SMTP_USERNAME = Deno.env.get("CLIENT_SMTP_USERNAME") as string || "";
-export const CLIENT_SMTP_PASSWORD = Deno.env.get("CLIENT_SMTP_PASSWORD") as string || "";
-export const CLIENT_SMTP_EMAIL = Deno.env.get("CLIENT_SMTP_EMAIL") as string || "";
-
+export const SENDGRID_EMAIL = Deno.env.get("SENDGRID_EMAIL") as string || "";
+export const SENDGRID_TOKEN = Deno.env.get("SENDGRID_TOKEN") as string || "";
 
 export const CLIENT_DATABASE_CONFIG:ClientConfig = {
   hostname: DATABASE_HOST,
@@ -37,6 +33,7 @@ export const MESSAGE_SUCCESS_UPDATE_USER = "Usuário atualizado com sucesso"
 export const MESSAGE_SUCCESS_DELETE_USER = "Usuário deletado com sucesso"
 export const MESSAGE_SUCCESS_IN_FIND_USER = "Sucesso em encontrar usuario";
 export const MESSAGE_FAILD_IN_FIND_USER = "Falhou em encontrar usuario, usuário ou senha estão errados"; 
+export const MESSAGE_FAILD_IN_FIND_USER_BY_EMAIL = "Nenhum usuário com este email foi encontrado"; 
 export const MESSAGE_UNAUTHORIZED = "Não autorizado ✋🚫"
 
 
@@ -59,7 +56,17 @@ export const SCHEMA_READ_USER_BY_USERNAME_AND_PASSWORD = new Schema({
   password: {type:String,required: true,message: "senha é obrigatório"},
   photo: {type:String,required: false,message: "foto é obrigatório"},
   bio: {type:String,required: false}
-}) 
+})
+
+export const SCHEMA_READ_USER_BY_EMAIL = new Schema({
+  id: {type:Number,required: false,message: "id é obrigatório"},
+  name: {type:String,required: false,message: "nome é obrigatório"},
+  email: {type:String,required: true,message: "email é obrigatório"},
+  username: {type:String,required: false,message: "nome de usuário é obrigatório"},
+  password: {type:String,required: false,message: "senha é obrigatório"},
+  photo: {type:String,required: false,message: "foto é obrigatório"},
+  bio: {type:String,required: false}
+})
 
 
 export const SCHEMA_UPDATE_USER = new Schema({
