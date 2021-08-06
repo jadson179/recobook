@@ -51,8 +51,8 @@ routes.post('/auth/forgot_password',async ({request,response})=>{
             ],
         };
         
-      const {errors} = await sendMail(mail, { apiKey: SENDGRID_TOKEN });
-      console.log(errors)
+        await sendMail(mail, { apiKey: SENDGRID_TOKEN });
+    
     }
 
     response.status = status

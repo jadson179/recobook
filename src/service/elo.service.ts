@@ -167,7 +167,6 @@ export async function update_elo(elo:Elo) {
         return { error: false, message: MESSAGE_SUCESS_UPDATE_ELO, status: 201  }
     
         } catch (error) {
-            console.log(error.message)
             switch (error.message) {
                 default:
                     return { error: true, message: MESSAGE_INTERNAL_SERVER_ERROR, status: 500  }
