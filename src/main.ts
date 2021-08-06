@@ -7,6 +7,7 @@ import routesUsers from "./routes/user.route.ts"
 import routesElos from "./routes/elo.route.ts"
 import routesLikes from "./routes/like.route.ts"
 import routesImages from "./routes/image.route.ts"
+import routesVideos from "./routes/video.route.ts"
 
 const app = new Application();
 
@@ -16,5 +17,6 @@ app.use(routesUsers.routes())
 app.use(routesElos.routes())
 app.use(routesLikes.routes())
 app.use(routesImages.routes())
+app.use(routesVideos.routes())
 
 await app.listen({port: SERVER_PORT});
