@@ -25,7 +25,7 @@ Deno.test("Deveria criar um elo", async () => {
 Deno.test("Deveria encontrar um elo por id", async () => {
     
     const { error, elo } = await find_elo_by_id({
-        id: 12
+        id: 3
     })
 
     assertExists(elo)
