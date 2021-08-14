@@ -16,6 +16,8 @@ import {SENDGRID_EMAIL,SENDGRID_TOKEN} from '../const.ts'
 const routes = new Router()
 
 routes.post('/auth',async ({request,response})=>{
+    try {
+
     const userData = await request.body().value as User
     const  {error,message,status,user} = await find_user_by_username_and_password(userData)
     let  token = ""
@@ -24,12 +26,14 @@ routes.post('/auth',async ({request,response})=>{
         token = await createToken<User>(user,"user")
 
     response.status = status
-    response.body = {
-        error,
-        message,
-        user,
-        token
-    }
+    response.body = {error,message,user,token}
+
+    } catch (error) {
+    response.status = 401
+    response.body = {error: true,message: error.message,user: null,token: ""}
+    }  
+    
+    
 })
 
 routes.post('/auth/forgot_password',async ({request,response})=>{
