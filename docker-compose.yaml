@@ -12,8 +12,6 @@ services:
       SENDGRID_EMAIL: ""
       SENDGRID_TOKEN: ""
 
-      
-
 
   dobby: 
     container_name: dobby
