@@ -44,9 +44,14 @@ routes.get('/like',async ({request,response})=>{
          request.headers.get('authorization') as string
      ) as unknown as Payload
      
-     const likeData = await request.body().value as Like
+     const id_user = request.url.searchParams.get("id_user") 
+     const id_elo = request.url.searchParams.get("id_elo") 
+
   
-     const  {error,message,status,likes} = await find_like_in_elo(likeData)
+     const  {error,message,status,likes} = await find_like_in_elo({
+        id_elo: Number(id_elo),
+        id_user: Number(id_user)
+    })
  
      response.status = status
      response.body = {
