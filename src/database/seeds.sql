@@ -1,7 +1,7 @@
 
 ## User
 
-INSERT INTO users VALUES (NULL,"Jadson dos Santos Silva","jadson44.santos@gmail.com","15859eb4-f0bb-11eb-aef4-9b77f48ed9b1","15859eb4-f0bb-11eb-aef4-9b77f48ed9b1","http://0.0.0.0:1993/user/0000000001.png","");
+INSERT INTO users VALUES (NULL,"Jadson dos Santos Silva","jadson44.santos@gmail.com","gtjadsonsantos","123456789","https://avatars.githubusercontent.com/u/42282908?v=4","Técnico & Desenvolvedor");
 INSERT INTO users VALUES (NULL,"Bruna Farias","bruna.farias@gmail.com","110e5682-f0bb-11eb-9ae0-6b6cc40c834a","110e5682-f0bb-11eb-9ae0-6b6cc40c834a","http://0.0.0.0:1993/user/0000000002.png","");
 INSERT INTO users VALUES (NULL,"Jeferson Silva","jeferson.silva@gmail.com","d87bd4d4-f0ba-11eb-88c0-93c01c1a6c5c","d87bd4d4-f0ba-11eb-88c0-93c01c1a6c5c","http://0.0.0.0:1993/user/0000000003.png","");
 INSERT INTO users VALUES (NULL,"Ana Maria","ana.maria@gmail.com","e63cf972-f0ba-11eb-9b2a-d37ad93d7040","e63cf972-f0ba-11eb-9b2a-d37ad93d7040","http://0.0.0.0:1993/user/0000000004.png","");
@@ -15,6 +15,28 @@ INSERT INTO users VALUES (NULL,"Lucineia","lucineia@gmail.com","03cf2d66-f0bb-11
 
 INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"muito barato","rua da trindade, 394, Agronômica, Brasil",1);
 INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"barato","rua dos pecados, 131, Bahia, Brasil",2);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","rua das fadas,942, Manaus, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","rua das fadas,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Ru facundes neto,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Almirante Carlos da Silveira Carneiro,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua mendes meireles,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua recife,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua campo grande,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua fortaleza,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua tansa,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua lerda,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua te perguntei algo ?,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","rua das fadas,942, Manaus, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","rua das fadas,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Ru facundes neto,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Almirante Carlos da Silveira Carneiro,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua mendes meireles,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua recife,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua campo grande,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua fortaleza,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua tansa,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua lerda,942, Florianópolis, Brasil",3);
+INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua te perguntei algo ?,942, Florianópolis, Brasil",3);
 INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","rua das fadas,942, Manaus, Brasil",3);
 INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"muito caro","rua das justificativas, 171, Distrito federal, Brasil",4);
 
