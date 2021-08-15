@@ -19,7 +19,7 @@ export const CLIENT_DATABASE_CONFIG:ClientConfig = {
   password: DATABASE_PASSWORD,
   db: DATABASE_NAME,
   port: DATABASE_PORT,
-  poolSize: 10, 
+  poolSize: 20, 
   charset: "utf8"
 }
 
@@ -202,8 +202,16 @@ export const SCHEMA_SEARCH_VIDEOS_IN_ELO = new Schema({
 }) 
 
 export const MESSAGE_SUCESS_CREATE_LIKE_IN_ELO = "Sucesso em registrar like"
+export const MESSAGE_SUCESS_FIND_LIKE_IN_ELO = "Você deu like neste elo"
+export const MESSAGE_FAILD_FIND_LIKE_IN_ELO = "Você não deu like neste elo"
 
 export const SCHEMA_CREATE_LIKE_IN_ELO = new Schema({
+  id: {type:Number,required: false,message: "id é obrigatório"},
+  id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"},
+  id_user: {type:Number,required: true, message: "identificação de um usuario é obrigatório"}
+}) 
+
+export const SCHEMA_QUERY_LIKE_IN_ELO = new Schema({
   id: {type:Number,required: false,message: "id é obrigatório"},
   id_elo: {type:Number,required: true, message: "identificação de um elo é obrigatório"},
   id_user: {type:Number,required: true, message: "identificação de um usuario é obrigatório"}

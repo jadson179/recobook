@@ -6,7 +6,8 @@ import { MESSAGE_UNAUTHORIZED } from "../const.ts";
 import Like from  '../model/like.model.ts'
 
 import {
-    register_like_in_elo
+    register_like_in_elo,
+    find_like_in_elo
 } from '../service/like.service.ts'
 import { Payload } from "../types.ts";
 import { verifyToken } from "../utils/token.ts";
@@ -36,5 +37,29 @@ routes.post('/like',async ({request,response})=>{
     response.body = {error: true,message: error.message}
    }
 })
+
+routes.get('/like',async ({request,response})=>{
+    try {
+     await verifyToken(
+         request.headers.get('authorization') as string
+     ) as unknown as Payload
+     
+     const likeData = await request.body().value as Like
+  
+     const  {error,message,status,likes} = await find_like_in_elo(likeData)
+ 
+     response.status = status
+     response.body = {
+         error,
+         message,
+         likes
+     }
+    } catch (error) {
+     response.status = 401
+     response.body = {error: true,message: error.message,likes: []}
+    }
+ })
+
+
 
 export default routes
