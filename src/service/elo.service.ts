@@ -58,17 +58,36 @@ export async function search_elos(elo:Elo,offset:number) {
          return { error: true, message: errors[0].message, elos: [], status: 400  }
      }
      
+    interface QueryCustomElo {
+        id:number,
+        description:string,
+        qtd_likes:number,
+        qtd_comments:number,
+        category:string,
+        address:string,
+        id_user:number
+        name:string
+        username:string
+        photo:string
+        bio:string
+    }
+
     await connection.connect(CLIENT_DATABASE_CONFIG)
-    const elos: Elo[] = await connection.query(`
+    const elos: QueryCustomElo[] = await connection.query(`
     SELECT
-        id,
-        description,
-        qtd_likes,
-        qtd_comments,
-        category,
-        address,
-        id_user 
-    FROM elos 
+        elos.id,
+        elos.description,
+        elos.qtd_likes,
+        elos.qtd_comments,
+        elos.category,
+        elos.address,
+        elos.id_user,
+        users.name,
+        users.username,
+        users.photo,
+        users.bio
+    FROM elos
+        INNER JOIN users ON elos.id_user = users.id
     WHERE 
         address LIKE ? AND
         category = ? AND 
