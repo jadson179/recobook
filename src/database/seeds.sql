@@ -2,81 +2,105 @@
 ## User
 
 INSERT INTO users VALUES (NULL,"Jadson dos Santos Silva","jadson44.santos@gmail.com","gtjadsonsantos","123456789","https://avatars.githubusercontent.com/u/42282908?v=4","Técnico & Desenvolvedor");
-INSERT INTO users VALUES (NULL,"Bruna Farias","bruna.farias@gmail.com","brufarias2","110e5682-f0bb-11eb-9ae0-6b6cc40c834a","http://0.0.0.0:1993/user/0000000002.png","");
-INSERT INTO users VALUES (NULL,"Jeferson Silva","jeferson.silva@gmail.com","jeferson13","d87bd4d4-f0ba-11eb-88c0-93c01c1a6c5c","http://0.0.0.0:1993/user/0000000003.png","");
-INSERT INTO users VALUES (NULL,"Ana Maria","ana.maria@gmail.com","ana_maria","e63cf972-f0ba-11eb-9b2a-d37ad93d7040","http://0.0.0.0:1993/user/0000000004.png","");
-INSERT INTO users VALUES (NULL,"Juliana Farias","juliana.farias@gmail.com","juliana","f1094eb4-f0ba-11eb-9f82-f76d965cfa58","http://0.0.0.0:1993/user/0000000005.png","");
-INSERT INTO users VALUES (NULL,"Gustavo Nascimento","gustavo.nascimento@gmail.com","gustavo","f587855a-f0ba-11eb-89c1-c747f7633506","http://0.0.0.0:1993/user/0000000006.png","");
-INSERT INTO users VALUES (NULL,"Teston nascimento","teston.nascimento@gmail.com","teston","fa684776-f0ba-11eb-a557-bba96bc0a5e7","http://0.0.0.0:1993/user/0000000007.png","");
-INSERT INTO users VALUES (NULL,"Lucineia","lucineia@gmail.com","lucineia","03cf2d66-f0bb-11eb-ae7c-b34663324ce0","http://0.0.0.0:1993/user/0000000008.png","");
+INSERT INTO users VALUES (NULL,"Nilda","nilda@gmail.com","nilda","123456789","https://fotografiadicas.com.br/wp-content/uploads/2017/10/15-Como-fotografar-pessoas-Fotografia-Dicas.jpg","Amo o mundo");
+INSERT INTO users VALUES (NULL,"Jeferson Silva","jeferson.silva@gmail.com","jeferson13","123456789","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsJEK3wHnEaM2Y_k5sm7f2SM48VWiU6mj3Wg&usqp=CAU","");
+INSERT INTO users VALUES (NULL,"Ana Maria","ana.maria@gmail.com","ana_maria","123456789","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ48ZblqIbJgqm_vF73tsrJQv0U8U0iw6DN3A&usqp=CAU","");
 
 
 ## Elos
 
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"muito barato","rua da trindade, 394, Agronômica, Brasil",1);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"barato","rua dos pecados, 131, Bahia, Brasil",2);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","rua das fadas,942, Manaus, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","rua das fadas,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Ru facundes neto,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Almirante Carlos da Silveira Carneiro,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua mendes meireles,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua recife,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua campo grande,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua fortaleza,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua tansa,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua lerda,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua te perguntei algo ?,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","rua das fadas,942, Manaus, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","rua das fadas,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Ru facundes neto,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Almirante Carlos da Silveira Carneiro,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua mendes meireles,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua recife,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua campo grande,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua fortaleza,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua tansa,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua lerda,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","Rua te perguntei algo ?,942, Florianópolis, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"caro","rua das fadas,942, Manaus, Brasil",3);
-INSERT INTO elos VALUES (NULL,"LALALALALALALALLALALALALALLALALALALLALALALA :)",0,0,"muito caro","rua das justificativas, 171, Distrito federal, Brasil",4);
+INSERT INTO elos VALUES (NULL,"Amando esse lugar gente, recomendo a todos",0,0,"muito barato","Vietnã, Ásia",1);
+INSERT INTO elos VALUES (NULL,"Essa cidade fica tão linda a noite",0,0,"caor","Vietnã, Ásia",2);
+INSERT INTO elos VALUES (NULL,"Essa praia foi tudo de bom",0,0,"caro","Florianópolis, Ásia",3);
+INSERT INTO elos VALUES (NULL,"Essa praia foi tudo de bom",0,0,"caro","Florianópolis, Ásia",4);
+INSERT INTO elos VALUES (NULL,"Um ótimo lugar para você ser levar sua familia",0,0,"caro","Pinheiros,Brasil",4);
+INSERT INTO elos VALUES (NULL,"Amei conhecer a Bahia",0,0,"caro","Salvador,Bahia",4);
+INSERT INTO elos VALUES (NULL,"Amando esse lugar gente, recomendo a todos",0,0,"muito barato","Vietnã, Ásia",1);
+INSERT INTO elos VALUES (NULL,"Essa cidade fica tão linda a noite",0,0,"caor","Vietnã, Ásia",2);
+INSERT INTO elos VALUES (NULL,"Essa praia foi tudo de bom",0,0,"caro","Florianópolis, Ásia",3);
+INSERT INTO elos VALUES (NULL,"Essa praia foi tudo de bom",0,0,"caro","Florianópolis, Ásia",4);
+INSERT INTO elos VALUES (NULL,"Um ótimo lugar para você ser levar sua familia",0,0,"caro","Pinheiros,Brasil",4);
+INSERT INTO elos VALUES (NULL,"Amei conhecer a Bahia",0,0,"caro","Salvador,Bahia",4);
+INSERT INTO elos VALUES (NULL,"Amando esse lugar gente, recomendo a todos",0,0,"muito barato","Vietnã, Ásia",1);
+INSERT INTO elos VALUES (NULL,"Essa cidade fica tão linda a noite",0,0,"caor","Vietnã, Ásia",2);
+INSERT INTO elos VALUES (NULL,"Essa praia foi tudo de bom",0,0,"caro","Florianópolis, Ásia",3);
+INSERT INTO elos VALUES (NULL,"Essa praia foi tudo de bom",0,0,"caro","Florianópolis, Ásia",4);
+INSERT INTO elos VALUES (NULL,"Um ótimo lugar para você ser levar sua familia",0,0,"caro","Pinheiros,Brasil",4);
+INSERT INTO elos VALUES (NULL,"Amei conhecer a Bahia",0,0,"caro","Salvador,Bahia",4);
+INSERT INTO elos VALUES (NULL,"Amando esse lugar gente, recomendo a todos",0,0,"muito barato","Vietnã, Ásia",1);
+INSERT INTO elos VALUES (NULL,"Essa cidade fica tão linda a noite",0,0,"caor","Vietnã, Ásia",2);
+INSERT INTO elos VALUES (NULL,"Essa praia foi tudo de bom",0,0,"caro","Florianópolis, Ásia",3);
+INSERT INTO elos VALUES (NULL,"Essa praia foi tudo de bom",0,0,"caro","Florianópolis, Ásia",4);
+INSERT INTO elos VALUES (NULL,"Um ótimo lugar para você ser levar sua familia",0,0,"caro","Pinheiros,Brasil",4);
+INSERT INTO elos VALUES (NULL,"Amei conhecer a Bahia",0,0,"caro","Salvador,Bahia",4);
 
 ## Comments
 
 INSERT INTO comments VALUES (NULL,"Muito massaaaaaaaaa",1,1);
-INSERT INTO comments VALUES (NULL,"Lindooo",2,2);
-INSERT INTO comments VALUES (NULL,"Minha nossaaaa",3,3);
-INSERT INTO comments VALUES (NULL,"Legal",1,1);
-INSERT INTO comments VALUES (NULL,"massaaaaaaaaa cara",1,1);
-
 
 ## Likes 
 
 INSERT INTO likes VALUES (NULL,1,1);
-INSERT INTO likes VALUES (NULL,1,2);
-INSERT INTO likes VALUES (NULL,1,3);
-INSERT INTO likes VALUES (NULL,2,1);
-INSERT INTO likes VALUES (NULL,2,2);
-INSERT INTO likes VALUES (NULL,2,3);
-
 
 ## Videos 
-
-INSERT INTO videos VALUES (NULL,"http://0.0.0.0:1993/video/747e5102-f0bd-11eb-9aa6-ef5ef7a84350.mp4",1);
-INSERT INTO videos VALUES (NULL,"http://0.0.0.0:1993/video/747ec112-f0bd-31eb-9aa6-ef5ef7a84350.mp4",2);
-INSERT INTO videos VALUES (NULL,"http://0.0.0.0:1993/video/747e112-f0bd-41eb-9aa6-ef5ef7a8f350.mp4",1);
-INSERT INTO videos VALUES (NULL,"http://0.0.0.0:1993/video/747e51a2-f0bd-51eb-faa6-ef5ef7a84350.mp4",3);
-INSERT INTO videos VALUES (NULL,"http://0.0.0.0:1993/video/747ec5102-f0bd-51eb-faa6-ef5ef7a84350.mp4",3);
-INSERT INTO videos VALUES (NULL,"http://0.0.0.0:1993/video/747ec102-f0bd-51eb-faa6-ef5ef7a84350.mp4",2);
-INSERT INTO videos VALUES (NULL,"http://0.0.0.0:1993/video/747ec102-f0bd-51eb-aaa6-ef5ef7a84350.mp4",2);
-
+INSERT INTO videos VALUES (NULL,"https://youtu.be/NhQC8q6Ejpk",1);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",1);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",2);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",3);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",4);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",6);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",7);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",8);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",9);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",10);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",11);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",12);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",13);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",14);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",15);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",16);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",17);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",18);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",19);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",20);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",21);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",22);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",23);
+INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",24);
 
 ## Images
 
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2018/01/04/07/59/salt-harvesting-3060093__340.jpg",1);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619__340.jpg",2);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2014/08/27/18/24/girl-429380__340.jpg",3);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2021/07/09/02/29/family-6398107_960_720.jpg",3);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2016/10/30/17/49/couple-1783843_960_720.jpg",4);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2015/05/20/22/58/lost-places-776297__340.jpg",5);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",5);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",6);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",7);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",8);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",9);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",10);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",11);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",12);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",14);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",15);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",16);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",17);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",18);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",19);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",20);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",21);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",22);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",23);
+INSERT INTO images VALUES (NULL,"https://cdn.pixabay.com/photo/2017/09/21/02/41/illustration-2770398_960_720.jpg",24);
 
-INSERT INTO images VALUES (NULL,"http://0.0.0.0:1993/video/747e5102-f0bd-11eb-9aa6-ef5ef7a84351.png",1);
-INSERT INTO images VALUES (NULL,"http://0.0.0.0:1993/video/747ec112-f0bd-31eb-9aa6-ef5ef7a84352.png",2);
-INSERT INTO images VALUES (NULL,"http://0.0.0.0:1993/video/747e112-f0bd-41eb-9aa6-ef5ef7a8f353.png",1);
-INSERT INTO images VALUES (NULL,"http://0.0.0.0:1993/video/747e51a2-f0bd-51eb-faa6-ef5ef7a84354.png",3);
-INSERT INTO images VALUES (NULL,"http://0.0.0.0:1993/video/747ec5102-f0bd-51eb-faa6-ef5ef7a84355.png",3);
-INSERT INTO images VALUES (NULL,"http://0.0.0.0:1993/video/747ec102-f0bd-51eb-faa6-ef5ef7a84356.png",2);
-INSERT INTO images VALUES (NULL,"http://0.0.0.0:1993/video/747ec102-f0bd-51eb-aaa6-ef5ef7a84357.png",2);
+
+
+
+
+
+
+
+
