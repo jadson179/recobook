@@ -4,14 +4,13 @@ services:
     container_name: core
     build: .
     ports: 
-      - 1993:1993
+      - 8000:8000
     volumes: 
         - ./src:/app
     environment: 
       SERVICE_AUTH_KEY: "teste"
-      SENDGRID_EMAIL: ""
-      SENDGRID_TOKEN: ""
-
+      SENDGRID_EMAIL: "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"
+      SENDGRID_TOKEN: "jadson44.santos@gmail.com"
 
   dobby: 
     container_name: dobby
