@@ -26,18 +26,21 @@ export async function search_comments(comment:Comment,offset:number) {
      if (errors.length > 0) {
          return { error: true, message: errors[0].message, comments: [], status: 400  }
      }
+    
      
     await connection.connect(CLIENT_DATABASE_CONFIG)
-    const comments: Comment[] = await connection.query(`
+    const comments: {id: number,content:string,id_elo:number,id_user:number,username:string}[] = await connection.query(`
     SELECT
-        id,
-        content,
-        id_elo,
-        id_user
-    FROM comments 
+        comments.id,
+        comments.content,
+        comments.id_elo,
+        comments.id_user,
+        users.username
+    FROM comments
+        INNER JOIN users ON comments.id_user = users.id
     WHERE 
-        id_elo = ? 
-    ORDER BY id DESC
+        comments.id_elo = ?
+    ORDER BY comments.id DESC
     LIMIT 20
     OFFSET ?
     `,
