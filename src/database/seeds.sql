@@ -43,30 +43,30 @@ INSERT INTO comments VALUES (NULL,"Muito massaaaaaaaaa",1,1);
 INSERT INTO likes VALUES (NULL,1,1);
 
 ## Videos 
-INSERT INTO videos VALUES (NULL,"https://youtu.be/NhQC8q6Ejpk",1);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",1);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",2);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",3);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",4);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",6);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",7);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",8);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",9);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",10);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",11);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",12);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",13);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",14);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",15);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",16);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",17);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",18);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",19);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",20);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",21);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",22);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",23);
-INSERT INTO videos VALUES (NULL,"https://youtu.be/MTA_ALGAAII",24);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",1);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",1);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",2);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",3);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",4);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",6);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",7);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",8);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",9);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",10);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",11);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",12);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",13);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",14);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",15);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",16);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",17);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",18);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",19);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",20);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",21);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",22);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",23);
+INSERT INTO videos VALUES (NULL,"https://www.w3schools.com/html/mov_bbb.mp4",24);
 
 ## Images
 
