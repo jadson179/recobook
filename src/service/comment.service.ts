@@ -148,10 +148,8 @@ export async function delete_comment(comment:Comment){
         await connection.transaction(async (conn)=>{
 
             
-            await conn.execute(`DELETE FROM comments WHERE id = ? AND id_elo = ? AND id_user = ?;`,[
-                comment.id,
-                comment.id_elo,
-                comment.id_user
+            await conn.execute(`DELETE FROM comments WHERE id = ?`,[
+                comment.id
             ])
             
             const [{qtd_comments}] = await conn.query(`SELECT COUNT(*) as qtd_comments FROM comments WHERE id_elo = ?;`,[comment.id_elo]) as [{qtd_comments: number}]
