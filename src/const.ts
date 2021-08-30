@@ -19,7 +19,9 @@ export const CLIENT_DATABASE_CONFIG:ClientConfig = {
   password: DATABASE_PASSWORD,
   db: DATABASE_NAME,
   port: DATABASE_PORT,
-  poolSize: 30,
+  poolSize: 3,
+  idleTimeout: 1000,
+  debug: true,
   charset: "utf8"
 }
 
