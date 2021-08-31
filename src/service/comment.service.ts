@@ -120,11 +120,10 @@ export async function update_comment(comment:Comment){
         await connection.connect(CLIENT_DATABASE_CONFIG)
         await connection.execute(`UPDATE comments SET content = ? WHERE id = ? AND id_user = ? `,[
             comment.content,
-            comment.id_elo,
+            comment.id,
             comment.id_user
         ])
         await connection.close()
-
         return { error: false, message: MESSAGE_SUCESS_UPDATE_COMMENT_IN_ELO, status: 200 }
 
     } catch (error) {
