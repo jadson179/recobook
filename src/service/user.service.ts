@@ -128,17 +128,32 @@ export async function update_user(user:User) {
         return { error: true, message: errors[0].message, status: 400  }
     }
 
-   await connection.connect(CLIENT_DATABASE_CONFIG)
-   await connection.execute(`UPDATE users SET name = ?, email = ?, username = ?, password = ?, photo = ?, bio = ? WHERE id = ?;`,[
-         user.name,
-         user.email,
-         user.username,
-         user.password,
-         user.photo,
-         user.bio,
-         user.id
-    ])
-    await connection.close()
+   if (user.password){
+    await connection.connect(CLIENT_DATABASE_CONFIG)
+    await connection.execute(`UPDATE users SET name = ?, email = ?, username = ?, password = ?, photo = ?, bio = ? WHERE id = ?;`,[
+            user.name,
+            user.email,
+            user.username,
+            user.password,
+            user.photo,
+            user.bio,
+            user.id
+        ])
+        await connection.close()
+    }else {
+        await connection.connect(CLIENT_DATABASE_CONFIG)
+        const users: User[] = await connection.query(`SELECT id,name,email,username,password,photo,bio FROM users WHERE email = ? LIMIT 1`,[ user.email ])
+        await connection.execute(`UPDATE users SET name = ?, email = ?, username = ?, password = ?, photo = ?, bio = ? WHERE id = ?;`,[
+            user.name,
+            user.email,
+            user.username,
+            users[0].password,
+            user.photo,
+            user.bio,
+            user.id
+        ])
+        await connection.close()
+    }
      
     return { error: false, message: MESSAGE_SUCCESS_UPDATE_USER, status: 200  }
      

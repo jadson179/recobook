@@ -76,7 +76,7 @@ export const SCHEMA_UPDATE_USER = new Schema({
   name: {type:String,required: true,message: "nome é obrigatório"},
   email: {type:String,required: true,message: "email é obrigatório"},
   username: {type:String,required: true,message: "nome de usuário é obrigatório"},
-  password: {type:String,required: true,message: "senha é obrigatório"},
+  password: {type:String,required: false,message: "senha é obrigatório"},
   photo: {type:String,required: true,message: "foto é obrigatório"},
   bio: {type:String,required: false}
 }) 
