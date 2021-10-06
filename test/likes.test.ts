@@ -7,27 +7,10 @@ import {
 } from '../src/service/like.service.ts'
 
 Deno.test("Deveria registrar um like no elo 2", async () => {
-    await register_like_in_elo({
-        id_user: 2,
-        id_elo: 2
-    })
     const { error,message,status } = await register_like_in_elo({
         id_user: 2,
         id_elo: 2
     })
-    assertEquals(status,200)
-    assertEquals<boolean>(error,false)
-
-});
-
-Deno.test("Deveria verificar um usuario deu like", async () => {
-    
-    const { error,status,likes } = await find_like_in_elo({
-        id_user: 2,
-        id_elo: 2
-    })
-
-    assert(likes.length > 0)
     assertEquals(status,200)
     assertEquals<boolean>(error,false)
 

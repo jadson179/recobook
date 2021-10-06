@@ -5,7 +5,7 @@ import { create_user, delete_user_by_email, delete_user_by_id, delete_user_by_us
 
 
 
-Deno.test("Deveria criar um usuario", async () => {
+Deno.test("Deveria criar dois usuarios", async () => {
     
     const { error } = await create_user({
         name: "Jadson dos Santos Silva",
@@ -16,12 +16,16 @@ Deno.test("Deveria criar um usuario", async () => {
         bio: ""
     })
 
-    if (error) { 
-        assertEquals<boolean>(error,true)
-    }else {
-        assertEquals<boolean>(error,false)
-    }
+    await create_user({
+        name: "Teste da Silva",
+        email: "teste44.silva@gmail.com",
+        username: "teste",
+        password: "teste",
+        photo: "http://0.0.0.0:1993/user/0000000001.png",
+        bio: ""
+    })
 
+    assertEquals<boolean>(error,false)
 });
 
 Deno.test("Deveria encontrar um usuario pelo username e senha", async () => {
@@ -39,7 +43,7 @@ Deno.test("Deveria encontrar um usuario pelo username e senha", async () => {
 Deno.test("Deveria encontrar um usuario pelo email", async () => {
     
     const { error,user, } = await find_user_by_email ({
-        email: "jeferson.silva@gmail.com"
+        email: "jadson44.santos@gmail.com"
     })
     assertExists(user)
     assertEquals<boolean>(error,false)

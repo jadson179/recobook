@@ -15,7 +15,14 @@ Deno.test("Deveria criar um elo", async () => {
         address:  "Almirante Carlos da Silveira Carneiro, 394",
         category: "caro",
         description: ":)",
-        id_user: 3
+        id_user: 2
+    })
+
+    await create_elo({
+        address:  "Almirante Carlos da Silveira Carneiro, 394",
+        category: "caro",
+        description: ":)",
+        id_user: 2
     })
 
     assertEquals<boolean>(error,false)
@@ -23,9 +30,20 @@ Deno.test("Deveria criar um elo", async () => {
 });
 
 Deno.test("Deveria encontrar um elo por id", async () => {
+
+    const { elos } = await search_elos(
+        {
+        address: "%Almirante%",
+        qtd_comments: 0,
+        qtd_likes: 0,
+        category: "caro",
+        description: "%%",
+        },
+        0
+    )
     
     const { error, elo } = await find_elo_by_id({
-        id: 3
+        id: elos[0].id
     })
 
     assertExists(elo)
@@ -53,13 +71,25 @@ Deno.test("Deveria pesquisar um elo pela busca ", async () => {
 
 
 Deno.test("Deveria atualiza um elo", async () => {
+
+    const { elos } = await search_elos(
+        {
+        address: "%Almirante%",
+        qtd_comments: 0,
+        qtd_likes: 0,
+        category: "caro",
+        description: "%%",
+        },
+        0
+    )
+
     
     const { error } = await update_elo({
-        id: 1,
+        id: elos[0].id,
         address:  "Almirante Carlos da Silveira Carneiro, 394",
         category: "caro",
         description: ":)",
-        id_user: 3
+        id_user: 2
     })
 
     assertEquals<boolean>(error,false)
@@ -68,12 +98,23 @@ Deno.test("Deveria atualiza um elo", async () => {
 
 Deno.test("Deveria excluir um elo", async () => {
     
-    const { error,message } = await delete_elo_by_id({
-        id: 1,
+    const { elos } = await search_elos(
+        {
+        address: "%Almirante%",
+        qtd_comments: 0,
+        qtd_likes: 0,
+        category: "caro",
+        description: "%%",
+        },
+        0
+    )
+    
+    const { error } = await delete_elo_by_id({
+        id: elos[0].id,
         address:  "Almirante Carlos da Silveira Carneiro, 394",
         category: "caro",
         description: ":)",
-        id_user: 3
+        id_user: 2
     })
 
     assertEquals<boolean>(error,false)
