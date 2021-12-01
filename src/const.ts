@@ -10,8 +10,8 @@ export const DATABASE_PASSWORD = "root";
 export const DATABASE_NAME = "core";
 export const DATABASE_PORT = 3306;
 
-export const SENDGRID_EMAIL = Deno.env.get("SENDGRID_EMAIL") as string || "";
-export const SENDGRID_TOKEN = Deno.env.get("SENDGRID_TOKEN") as string || "";
+export const GMAIL_EMAIL = Deno.env.get("GMAIL_EMAIL") as string || "";
+export const GMAIL_PASSWORD = Deno.env.get("GMAIL_PASSWORD") as string || "";
 
 export const CLIENT_DATABASE_CONFIG:ClientConfig = {
   hostname: DATABASE_HOST,
